@@ -1,0 +1,26 @@
+# environment
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.DS_Store
+.env
+
+# data is versioned by DVC, not Git
+/data/glut_ews.duckdb
+/data/glut_ews.duckdb.wal
+/parquet
+/data/raw/sources
+/data/outputs/*.parquet
+
+# experiment tracking (local)
+mlruns/
+mlartifacts/
+
+# local backups and viewing exports
+/data/backups/
+/csv_view/
+.vscode/

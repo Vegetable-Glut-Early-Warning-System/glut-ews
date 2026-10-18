@@ -1,0 +1,16 @@
+issue_id,table,issue,core_handling
+KI-01,raw.harti_weekly_prices,"Missing weeks (2019 W16; 2020 W11–18 COVID lockdown; 2020 W41–52; 2021 W1–2, W21–24, W34)",Kept as NULL in core (provenance=missing); imputation left to modules
+KI-02,raw.harti_weekly_prices,Week 53 present in 2024 wholesale but not retail; HARTI weeks are not ISO weeks,Week 53 averaged into week 52; core calendar uses 7-day blocks from 1 Jan (week 52 spans 8–9 days)
+KI-03,raw.agstat_dcs_national_seasonal,"Red pumpkin 2024/25 Maha production (9,608.4 t) identical to capsicum value; implies 2.3 t/ha vs ~11 t/ha normally",Core uses extent × 11.0 t/ha (provenance=estimated); raw value retained
+KI-04,raw.agstat_dcs_national_seasonal,"Bandakka 2025 Yala equals Ash plantain 2025 Maha (32,681.1) in DCS workbook – indicates copy errors in 2025 provisional data",2025 values treated as provisional
+KI-05,raw.agstat_dcs_national_seasonal,"Values revised between AgStat editions (e.g. 2022 tomato annual extent 6,008 ha in AgStat 2023 vs 5,893 ha in AgStat 2024)",Latest edition used per season
+KI-06,raw.cf_district_tables,"District name variants and text-extraction splits: Moneragala, Nuwaraeliya, N eliya, Mullathivu, Kurunagala, ""Pol onnaruwa IP"", ""Hasal aka IP"", ""Monaragal a IP""",Canonicalised to 25 standard district names; IP (inter-province) rows merged into their district
+KI-07,raw.cf_district_tables,"Some bulletins are image-only (no extractable tables); several reports are partial-season progress, not finals",District shares taken from final or latest-available reports for 5 seasons; other seasons synthetic
+KI-08,raw.cf_national_winged_bean,"DOA Crop Forecast winged bean extent (~650–740 ha) far below DCS 3-season averages (~960–1,130 ha) – different methodologies",DOA Crop Forecast figures used
+KI-09,raw.cost_of_cultivation,"Yield, cost and profit published per acre; core uses per kg / per hectare",Unit costs (Rs/kg) carried; per-hectare values derived with 1 ha = 2.471 ac
+KI-10,raw.cost_of_cultivation,2020/21 Maha special issue (COVID) omitted vegetables except green chilli; cucumber and winged bean never surveyed,"Interpolated (tomato, pumpkin) or synthetic (cucumber, winged bean); see provenance"
+KI-11,raw.weather_locations,"""Kilinochchi[1]"" label artefact; ""Moneragala"" spelling",Canonicalised
+KI-12,raw.weather_daily,Weather series ends 2024-06-08,Extended to 2025-12-31 by analog-year block bootstrap (provenance=synthetic)
+KI-13,raw.harti_weekly_prices,No winged bean price series published by HARTI weekly file,Synthetic weekly series from AgStat annual farm-gate prices (provenance=synthetic)
+KI-14,—,No public market-arrivals series for any economic centre,"Arrivals modelled from production, planting progress, crop calendar, loss rates and DEC share (provenance=synthetic)"
+KI-15,raw.ccpi_anchors,Only selected official monthly CCPI points available in project files,Monthly CCPI log-interpolated between anchors (provenance=estimated); replace with official DCS series

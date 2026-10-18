@@ -1,0 +1,15 @@
+parameter,crop,value,low,high,source,provenance
+post_harvest_loss_rate,Tomato,0.3,0.12,0.4,Base 30% = lower bound of national 30–40% PHL range (COPA/NAO 2015; JAS 2021 Mapping PHW); low 12% = DCS Food Balance Sheet 2024 waste/supply; high 40%,observed
+post_harvest_loss_rate,Pumpkin,0.15,0.1,0.2,"ASSUMPTION: hard-skinned, low perishability; MERcon 2020 cites 10–15% average vegetable waste – upper end used",synthetic
+post_harvest_loss_rate,Cucumber,0.2,0.15,0.3,"NIPHM report to Ministry of Agriculture (2023, via The Morning): cucumber ~20% of harvest",observed
+post_harvest_loss_rate,Winged bean,0.24,0.2,0.3,"ASSUMPTION by analogy: NIPHM 2023 beans 24%, long beans 20%",synthetic
+post_harvest_loss_rate,Green chilli,0.2,0.15,0.3,"NIPHM report to Ministry of Agriculture (2023, via The Morning): green chilli ~20%",observed
+share_of_loss_before_market,All,0.75,0.6,0.8,JAS-SL 16(3) 2021; Gunarathna et al. MERCon 2020,observed
+share_marketed_via_economic_centres,All,0.6,0.5,0.7,HARTI Research Report 247 (2021),observed
+weeks_to_first_harvest|harvest_duration_weeks,Tomato,10|8,,,DOA crop recommendations (general),estimated
+weeks_to_first_harvest|harvest_duration_weeks,Pumpkin,13|4,,,DOA crop recommendations (general),estimated
+weeks_to_first_harvest|harvest_duration_weeks,Cucumber,6|5,,,DOA crop recommendations (general),estimated
+weeks_to_first_harvest|harvest_duration_weeks,Winged bean,10|10,,,DOA crop recommendations (general),estimated
+weeks_to_first_harvest|harvest_duration_weeks,Green chilli,11|12,,,DOA crop recommendations (general),estimated
+cumulative_planting_progress_Maha,All,"0.15,0.38,0.62,0.75,0.93,1.0",,,Derived from DOA Crop Forecast monthly progress,estimated
+cumulative_planting_progress_Yala,All,"0.11,0.4,0.62,0.79,0.93,1.0",,,Derived from DOA Crop Forecast monthly progress,estimated

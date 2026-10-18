@@ -1,0 +1,71 @@
+digraph G {
+  graph [rankdir=TB, ordering=out, fontname="Arial", fontsize=13, nodesep=0.35, ranksep=0.55, pad=0.4, bgcolor="white", newrank=true, splines=spline, compound=true,
+         label=<<b>Vegetable Glut Early Warning System — data &amp; system architecture</b><br/><font point-size="11">Project J26-ISE-306 · tomato · pumpkin · cucumber · winged bean · green chilli · 2019–2025</font>>, labelloc=t, fontsize=17];
+  node  [shape=box, style="rounded,filled", fontname="Arial", fontsize=11, margin="0.18,0.08", penwidth=1.3];
+  edge  [fontname="Arial", fontsize=9.5, color="#4A5568", arrowsize=0.7];
+
+  subgraph cluster_src { label=<<b>1 · Data sources</b>>; style="rounded,dashed"; color="#C77700"; fontcolor="#7A4A00";
+    node [fillcolor="#FFF4E5", color="#C77700"];
+    s1 [label="HARTI\nweekly prices"]; s2 [label="DOA Crop Forecast\ndistrict extent & targets"]; s3 [label="AgStat · DCS\nnational supply"];
+    s4 [label="DOA Cost of\nCultivation"]; s5 [label="Daily weather\n25 districts"]; s6 [label="Literature parameters\nloss rates · DEC share"];
+  }
+  subgraph cluster_db { label=<<b>2 · Parent dataset — glut_ews.duckdb  (+ Parquet exports)</b>>; style="rounded,filled"; fillcolor="#F4F8FD"; color="#2B6CB0"; fontcolor="#1A3E6F";
+    node [fillcolor="#E8F1FB", color="#2B6CB0"];
+    raw  [label=<<b>raw.*</b><br/>extracts as published<br/>never edited>];
+    core [label=<<b>core.*</b><br/>standardised · typed<br/>provenance on every row<br/>shared split &amp; calendar>];
+    views[label=<<b>views.component1–4</b><br/>assembled live by SQL>];
+    outp [label=<<b>outputs.*</b><br/>c1_glut_season · c2_pressure_score<br/>c3_risk_prediction · c4_advisory<br/>placeholder_v0 → v1>, fillcolor="#FFFFFF"];
+  }
+  common [label=<<b>src/glut_ews/common</b><br/>validate · split · lag_by_season>, fillcolor="#FDF2F2", color="#C53030"];
+
+  subgraph cluster_mod { label=<<b>3 · Modules — one owner each</b>>; style="rounded,filled"; fillcolor="#F3FAF6"; color="#2F855A"; fontcolor="#1C5236";
+    node [fillcolor="#E9F7EF", color="#2F855A", width=2.3];
+    c1 [label=<<b>C1</b> Historical glut<br/>detection &amp; cobweb<br/><i>interpretable statistics</i>>];
+    c2 [label=<<b>C2</b> Supply Pressure<br/>Score<br/><i>entropy index + calibrated score</i>>];
+    c3 [label=<<b>C3</b> Glut risk<br/>classification<br/><i>XGBoost · temporal validation</i>>];
+    c4 [label=<<b>C4</b> Cultivation<br/>advisory<br/><i>MOTAD optimisation</i>>];
+  }
+  subgraph cluster_xai { label=<<b>Explainable AI layer</b>>; style="rounded,filled"; fillcolor="#FAF5FF"; color="#6B46C1"; fontcolor="#44337A";
+    node [fillcolor="#F3E8FF", color="#6B46C1", width=2.3];
+    x1 [label="C1 · transparent rules\n& regression coefficients", style="rounded,dashed,filled"];
+    x2 [label="C2 · SHAP + additive\nindicator contributions"];
+    x3 [label="C3 · SHAP TreeExplainer\n→ plain-language reasons"];
+    x4 [label="C4 · reason codes from C3 SHAP\n+ binding constraints · what-if"];
+  }
+  subgraph cluster_del { label=<<b>5 · Delivery</b>>; style="rounded,dashed"; color="#4A5568";
+    node [fillcolor="#F7FAFC", color="#4A5568"];
+    api [label="FastAPI\nREST endpoints"]; dash [label="React dashboard\nagricultural officers"]; sms [label="SMS alerts\nfarmers"];
+  }
+  subgraph cluster_ops { label=<<b>4 · Engineering backbone</b>>; style="rounded,dashed"; color="#C53030";
+    node [fillcolor="#FDF2F2", color="#C53030"];
+    git [label="Git / GitHub\nbranch per module"]; dvc [label="DVC\ndataset versions"]; mlf [label="MLflow\nruns · metrics · models"];
+  }
+  subgraph cluster_eval { label=<<b>6 · Evaluation</b>>; style="rounded,dashed"; color="#4A5568";
+    node [fillcolor="#F7FAFC", color="#4A5568"];
+    e1 [label="Temporal split\ntrain ≤ 2023 Yala · test 2024/25–2025"]; e2 [label="Observed-subset results\n+ documented glut events"]; e3 [label="Expert validation\n· SUS usability"];
+  }
+
+  {rank=same; s1; s2; s3; s4; s5; s6;}
+  {rank=same; raw; core; views;}
+  {rank=same; c1; c2; c3; c4;}
+  {rank=same; x1; x2; x3; x4;}
+  {rank=same; outp; common;}
+  {rank=same; api; dash; sms; git; dvc; mlf;}
+  {rank=same; e1; e2; e3;}
+
+  s1 -> raw; s2 -> raw; s3 -> raw; s4 -> raw; s5 -> raw; s6 -> raw;
+  raw -> core [label=" standardise "]; core -> views;
+  s1 -> s2 -> s3 -> s4 -> s5 -> s6 [style=invis];
+  views -> c1 [lhead=cluster_mod, label=" each module reads its view "];
+  common -> c4 [style=dashed, color="#C53030", lhead=cluster_mod, label=" shared helpers ", fontcolor="#C53030"];
+  c1 -> c2 [label=" glut label\n cobweb index ", penwidth=1.6, color="#2F855A", weight=20];
+  c2 -> c3 [label=" pressure\n score ", penwidth=1.6, color="#2F855A", weight=20];
+  c3 -> c4 [label=" predicted risk\n + probabilities ", penwidth=1.6, color="#2F855A", weight=20];
+  x1 -> x2 -> x3 -> x4 [style=invis, weight=20];
+  c1 -> x1 [arrowhead=none, color="#6B46C1", style=dashed]; c2 -> x2 [arrowhead=none, color="#6B46C1"]; c3 -> x3 [arrowhead=none, color="#6B46C1"]; c4 -> x4 [arrowhead=none, color="#6B46C1"];
+  x2 -> outp [ltail=cluster_xai, label=" each module writes its own table\n (with explanations) ", penwidth=1.8, color="#2B6CB0", fontcolor="#1A3E6F"];
+  outp -> views [label=" downstream modules read ", style=dashed, penwidth=1.6, color="#2B6CB0", fontcolor="#1A3E6F", constraint=false];
+  outp -> api [penwidth=1.4]; api -> dash -> sms;
+  common -> git [style=invis]; git -> dvc -> mlf [style=invis];
+  dash -> e1 [style=invis]; e1 -> e2 -> e3 [style=invis];
+}

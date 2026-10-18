@@ -1,0 +1,5 @@
+outs:
+- md5: 051a7cc8578cee4807a2720197a90143
+  size: 13381632
+  hash: md5
+  path: glut_ews.duckdb
