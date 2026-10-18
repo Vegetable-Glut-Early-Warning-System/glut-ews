@@ -1,0 +1,15 @@
+season,season_type,season_year,season_start,season_end,planting_months,harvest_months,split
+2018/19 Maha,Maha,2018,2018-10-01,2019-03-31,Oct-Mar,Jan-Apr,train
+2019 Yala,Yala,2019,2019-04-01,2019-09-30,Apr-Sep,Jul-Oct,train
+2019/20 Maha,Maha,2019,2019-10-01,2020-03-31,Oct-Mar,Jan-Apr,train
+2020 Yala,Yala,2020,2020-04-01,2020-09-30,Apr-Sep,Jul-Oct,train
+2020/21 Maha,Maha,2020,2020-10-01,2021-03-31,Oct-Mar,Jan-Apr,train
+2021 Yala,Yala,2021,2021-04-01,2021-09-30,Apr-Sep,Jul-Oct,train
+2021/22 Maha,Maha,2021,2021-10-01,2022-03-31,Oct-Mar,Jan-Apr,train
+2022 Yala,Yala,2022,2022-04-01,2022-09-30,Apr-Sep,Jul-Oct,train
+2022/23 Maha,Maha,2022,2022-10-01,2023-03-31,Oct-Mar,Jan-Apr,train
+2023 Yala,Yala,2023,2023-04-01,2023-09-30,Apr-Sep,Jul-Oct,train
+2023/24 Maha,Maha,2023,2023-10-01,2024-03-31,Oct-Mar,Jan-Apr,validation
+2024 Yala,Yala,2024,2024-04-01,2024-09-30,Apr-Sep,Jul-Oct,validation
+2024/25 Maha,Maha,2024,2024-10-01,2025-03-31,Oct-Mar,Jan-Apr,test
+2025 Yala,Yala,2025,2025-04-01,2025-09-30,Apr-Sep,Jul-Oct,test

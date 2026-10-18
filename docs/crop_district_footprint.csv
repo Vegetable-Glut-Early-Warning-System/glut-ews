@@ -1,0 +1,30 @@
+crop,district,status,justification,source
+Tomato,Badulla,core,Team field finding; largest DOA-reported district every season,Team field list; DOA Crop Forecast district tables 2021/22 Maha-2024/25 Maha; AgStat 2025 Fig 15.2
+Tomato,Nuwara Eliya,core,Team field finding; major up-country producer,Team field list; DOA Crop Forecast; AgStat 2025 Fig 15.2
+Tomato,Kandy,core,Team field finding; consistently reported,Team field list; DOA Crop Forecast; AgStat 2025 Fig 15.2
+Tomato,Matale,core,Team field finding; second-largest DOA share,Team field list; DOA Crop Forecast; AgStat 2025 Fig 15.2
+Tomato,Hambantota,proposed,Present in all 6 DOA seasons and 8.7% of 2024 national extent (two independent sources),DOA Crop Forecast district tables; AgStat 2025 Fig 15.2 (479 ha of 5514 ha)
+Pumpkin,Anuradhapura,core,Team field finding; largest DOA-reported district,Team field list; DOA Crop Forecast district tables
+Pumpkin,Monaragala,core,Team field finding; second-largest DOA share,Team field list; DOA Crop Forecast district tables
+Pumpkin,Ampara,core,Team field finding; DOA reports zero in one season (kept: not clearly contradicted),Team field list; DOA Crop Forecast district tables
+Pumpkin,Hambantota,core,Team field finding; consistently reported,Team field list; DOA Crop Forecast district tables
+Pumpkin,Kurunegala,core,Team field finding; consistently reported,Team field list; DOA Crop Forecast district tables
+Pumpkin,Puttalam,proposed,Larger DOA share than two core districts in every season (mean 6.7% min 4.5%),DOA Crop Forecast district tables 2021/22 Maha-2024/25 Maha
+Green chilli,Anuradhapura,core,Team field finding; largest DOA-reported district,Team field list; DOA Crop Forecast; AgStat 2025 Fig 11
+Green chilli,Puttalam,core,Team field finding,Team field list; DOA Crop Forecast; AgStat 2025 Fig 11
+Green chilli,Monaragala,core,Team field finding,Team field list; DOA Crop Forecast; AgStat 2025 Fig 11
+Green chilli,Kurunegala,core,Team field finding,Team field list; DOA Crop Forecast; AgStat 2025 Fig 11
+Green chilli,Hambantota,core,Team field finding; smaller DOA share (kept: not contradicted),Team field list; DOA Crop Forecast; AgStat 2025 Fig 11
+Green chilli,Ampara,core,Team field finding,Team field list; DOA Crop Forecast; AgStat 2025 Fig 11
+Green chilli,Jaffna,proposed,DOA share above four core districts across 5 seasons (mean 6.9% min 4.3%),DOA Crop Forecast district tables 2021/22 Maha-2024 Yala
+Cucumber,Ampara,core,Team field finding; DOA reports zero in one season (kept: not clearly contradicted),Team field list; DOA Crop Forecast district tables
+Cucumber,Hambantota,core,Team field finding; largest DOA-reported district,Team field list; DOA Crop Forecast district tables
+Cucumber,Kurunegala,core,Team field finding,Team field list; DOA Crop Forecast district tables
+Cucumber,Monaragala,core,Team field finding,Team field list; DOA Crop Forecast district tables
+Cucumber,Anuradhapura,core,Team field finding,Team field list; DOA Crop Forecast district tables
+Cucumber,Puttalam,proposed,Second-largest DOA share in every season (mean 13.1% min 7.2%),DOA Crop Forecast district tables 2021/22 Maha-2024/25 Maha
+Winged bean,Matale,core,Team field finding,Team field list; DOA Crop Forecast district tables
+Winged bean,Kurunegala,core,Team field finding,Team field list; DOA Crop Forecast district tables
+Winged bean,Hambantota,core,Team field finding,Team field list; DOA Crop Forecast district tables
+Winged bean,Anuradhapura,core,Team field finding; small DOA share (kept: not contradicted),Team field list; DOA Crop Forecast district tables
+Winged bean,Ratnapura,proposed,Largest DOA-reported district in every season (mean 21.5% min 16.2%),DOA Crop Forecast district tables 2021/22 Maha-2024/25 Maha

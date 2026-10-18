@@ -18,12 +18,12 @@ class ContractError(ValueError):
 def publish_output(df: pd.DataFrame, table: str, version: str, outputs_dir: Path | str = OUTPUTS_DIR) -> Path:
     """Validate `df` against the contract for `table` and write data/outputs/<table>.parquet.
 
-    version: e.g. "v1", "v1.1". "placeholder_v0" is reserved.
+    version: e.g. "v1", "v1.1". "v0" is reserved for the generated starting outputs.
     After publishing: `dvc add data/outputs/<table>.parquet`, commit, push, and ask the
     schema owner to run `python scripts/rebuild_db.py`.
     """
-    if not version or version.startswith("placeholder"):
-        raise ContractError("use a real version label such as 'v1'")
+    if not version or version == "v0":
+        raise ContractError("'v0' is reserved for the generated starting outputs; use 'v1' or later")
     out = df.copy()
     out["source_version"] = version
     seasons = set(load("SELECT season FROM core.dim_season").season)

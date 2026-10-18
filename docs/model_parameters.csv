@@ -1,15 +1,23 @@
-parameter,crop,value,low,high,source,provenance
-post_harvest_loss_rate,Tomato,0.3,0.12,0.4,Base 30% = lower bound of national 30–40% PHL range (COPA/NAO 2015; JAS 2021 Mapping PHW); low 12% = DCS Food Balance Sheet 2024 waste/supply; high 40%,observed
-post_harvest_loss_rate,Pumpkin,0.15,0.1,0.2,"ASSUMPTION: hard-skinned, low perishability; MERcon 2020 cites 10–15% average vegetable waste – upper end used",synthetic
-post_harvest_loss_rate,Cucumber,0.2,0.15,0.3,"NIPHM report to Ministry of Agriculture (2023, via The Morning): cucumber ~20% of harvest",observed
-post_harvest_loss_rate,Winged bean,0.24,0.2,0.3,"ASSUMPTION by analogy: NIPHM 2023 beans 24%, long beans 20%",synthetic
-post_harvest_loss_rate,Green chilli,0.2,0.15,0.3,"NIPHM report to Ministry of Agriculture (2023, via The Morning): green chilli ~20%",observed
-share_of_loss_before_market,All,0.75,0.6,0.8,JAS-SL 16(3) 2021; Gunarathna et al. MERCon 2020,observed
-share_marketed_via_economic_centres,All,0.6,0.5,0.7,HARTI Research Report 247 (2021),observed
-weeks_to_first_harvest|harvest_duration_weeks,Tomato,10|8,,,DOA crop recommendations (general),estimated
-weeks_to_first_harvest|harvest_duration_weeks,Pumpkin,13|4,,,DOA crop recommendations (general),estimated
-weeks_to_first_harvest|harvest_duration_weeks,Cucumber,6|5,,,DOA crop recommendations (general),estimated
-weeks_to_first_harvest|harvest_duration_weeks,Winged bean,10|10,,,DOA crop recommendations (general),estimated
-weeks_to_first_harvest|harvest_duration_weeks,Green chilli,11|12,,,DOA crop recommendations (general),estimated
-cumulative_planting_progress_Maha,All,"0.15,0.38,0.62,0.75,0.93,1.0",,,Derived from DOA Crop Forecast monthly progress,estimated
-cumulative_planting_progress_Yala,All,"0.11,0.4,0.62,0.79,0.93,1.0",,,Derived from DOA Crop Forecast monthly progress,estimated
+parameter,crop,value,low,high,source
+post_harvest_loss_rate,Tomato,0.3,0.12,0.4,Base 30% = lower bound of national 30–40% PHL range (COPA/NAO 2015; JAS 2021 Mapping PHW); low 12% = DCS Food Balance Sheet 2024 waste/supply; high 40%
+post_harvest_loss_rate,Pumpkin,0.15,0.1,0.2,"ASSUMPTION: hard-skinned, low perishability; MERcon 2020 cites 10–15% average vegetable waste – upper end used"
+post_harvest_loss_rate,Cucumber,0.2,0.15,0.3,"NIPHM report to Ministry of Agriculture (2023, via The Morning): cucumber ~20% of harvest"
+post_harvest_loss_rate,Winged bean,0.24,0.2,0.3,"ASSUMPTION by analogy: NIPHM 2023 beans 24%, long beans 20%"
+post_harvest_loss_rate,Green chilli,0.2,0.15,0.3,"NIPHM report to Ministry of Agriculture (2023, via The Morning): green chilli ~20%"
+share_of_loss_before_market,All,0.75,0.6,0.8,JAS-SL 16(3) 2021; Gunarathna et al. MERCon 2020
+share_marketed_via_economic_centres,All,0.6,0.5,0.7,HARTI Research Report 247 (2021)
+weeks_to_first_harvest|harvest_duration_weeks,Tomato,10|8,,,DOA crop recommendations (general)
+weeks_to_first_harvest|harvest_duration_weeks,Pumpkin,13|4,,,DOA crop recommendations (general)
+weeks_to_first_harvest|harvest_duration_weeks,Cucumber,6|5,,,DOA crop recommendations (general)
+weeks_to_first_harvest|harvest_duration_weeks,Winged bean,10|10,,,DOA crop recommendations (general)
+weeks_to_first_harvest|harvest_duration_weeks,Green chilli,11|12,,,DOA crop recommendations (general)
+cumulative_planting_progress_Maha,All,"0.15,0.38,0.62,0.75,0.93,1.0",,,Derived from DOA Crop Forecast monthly progress
+cumulative_planting_progress_Yala,All,"0.11,0.4,0.62,0.79,0.93,1.0",,,Derived from DOA Crop Forecast monthly progress
+yield_bounds_t_ha,Tomato,8-30,8.0,30.0,Plausible district-season yield range; DOA Crop Forecast district yields and AgStat
+yield_bounds_t_ha,Pumpkin,7-22,7.0,22.0,Plausible district-season yield range; DOA Crop Forecast district yields and AgStat
+yield_bounds_t_ha,Cucumber,7-22,7.0,22.0,Plausible district-season yield range; DOA Crop Forecast district yields and AgStat
+yield_bounds_t_ha,Winged bean,5-14,5.0,14.0,Plausible district-season yield range; DOA Crop Forecast district yields and AgStat
+yield_bounds_t_ha,Green chilli,3-10,3.0,10.0,Plausible district-season yield range; DOA Crop Forecast district yields and AgStat
+footprint_inclusion_rule,All,"core list + proposed if DOA mean share >=6.5% & min >=4% over >=5 seasons, or mean >=5% and AgStat 2024 share >=7%",,,data/config/crop_district_footprint.csv
+centre_price_basis,All,Colombo (HARTI) series x WFP market/Colombo retail ratio; producing-area DEC wholesale adjusted by WFP Dambulla/Pettah wholesale ratio,,,raw.wfp_market_prices; raw.harti_weekly_prices
+colombo_gap_fill,All,missing HARTI retail <- DCS weekly retail / crop DCS:HARTI ratio; missing wholesale <- retail x rolling HARTI wholesale:retail ratio,,,raw.dcs_weekly_retail_prices

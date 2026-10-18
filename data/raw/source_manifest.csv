@@ -80,3 +80,5 @@ report_179.pdf,HARTI,Research report,2114906,2243ceb45c187fe78dac4034b11b6ec9b3e
 report_247.pdf,HARTI,Research Report 247 – farmer decisions & marketing channels,4067702,0c17c9f24370b6d57124b71ffd96f92229621647882020e7b1744489e22bafbc,raw
 slit_uni_Vegetable_Prices_2019-2026.xlsx,HARTI,"Weekly wholesale & retail prices, Colombo, 2019–2026",33493,bec819d22cc983d767be3f6488f15dcdb886f09c0296787a7ba831db3039e6f5,raw
 weatherData.csv,Open-Meteo (export provided),"Daily weather, 27 locations, 2010–2024",15796522,cc75e8c1cdc82d5ee0f2e75e80490fecc050247619455bfb751bcff80b90a1ee,raw
+wfp_food_prices_lk.csv,WFP (market price monitoring),"Monthly market prices, ~39 markets, 2020-01 to 2025-09",1437560,5e8816abcb192e5c23684dea35c6d1427bcd1a9dd6ec2a33b10da14c89ce83d2,raw
+dcs_weekly_retail_prices.csv,DCS,"Weekly Colombo open-market retail prices, 2020-W1 to 2024-09-W2",1102204,7a10069c5da923145bfa322f1f8777d926c83c118ea616e0163a51b396918d2b,raw

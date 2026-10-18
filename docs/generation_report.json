@@ -1,0 +1,752 @@
+{
+  "weather_daily": {
+    "observed_rows": 54250,
+    "modelled_rows": 14275,
+    "modelled_period": "2024-06-09 to 2025-12-31"
+  },
+  "national_supply_season": {
+    "winged_bean_yield_from_DOA_crop_forecast": [
+      "2021/22 Maha",
+      "2024/25 Maha",
+      "2025 Yala"
+    ],
+    "winged_bean_yield_modelled_seasons": 11
+  },
+  "supply_season": {
+    "cf_share_seasons": 167,
+    "modelled_share_seasons": 239,
+    "rows": 402
+  },
+  "planting_target_season": {
+    "from_DOA_crop_forecast": 163,
+    "modelled": 239
+  },
+  "colombo_price_sources": {
+    "Tomato": {
+      "dcs_to_harti_retail_ratio": 1.039,
+      "wholesale": {
+        "observed": 336,
+        "derived_dcs_ratio": 18,
+        "interpolated": 10
+      },
+      "retail": {
+        "observed": 328,
+        "derived_dcs": 19,
+        "interpolated": 17
+      }
+    },
+    "Pumpkin": {
+      "dcs_to_harti_retail_ratio": 1.074,
+      "wholesale": {
+        "observed": 336,
+        "derived_dcs_ratio": 20,
+        "interpolated": 8
+      },
+      "retail": {
+        "observed": 328,
+        "derived_dcs": 21,
+        "interpolated": 15
+      }
+    },
+    "Cucumber": {
+      "dcs_to_harti_retail_ratio": 1.081,
+      "wholesale": {
+        "observed": 336,
+        "derived_dcs_ratio": 17,
+        "interpolated": 11
+      },
+      "retail": {
+        "observed": 328,
+        "derived_dcs": 19,
+        "interpolated": 17
+      }
+    },
+    "Green chilli": {
+      "dcs_to_harti_retail_ratio": 1.117,
+      "wholesale": {
+        "observed": 336,
+        "derived_dcs_ratio": 17,
+        "interpolated": 11
+      },
+      "retail": {
+        "observed": 328,
+        "interpolated": 18,
+        "derived_dcs": 18
+      }
+    },
+    "Winged bean": {
+      "wholesale": {
+        "modelled": 364
+      },
+      "retail": {
+        "modelled": 364
+      }
+    }
+  },
+  "centre_price_ratios": {
+    "dambulla_wholesale_vs_pettah_wfp": 0.837,
+    "dambulla_pettah_wholesale_month_pairs": 15,
+    "producing_area_mean_retail_ratio": 0.87,
+    "mean_wholesale_ratio": {
+      "Dambulla|Tomato": 0.837,
+      "Dambulla|Pumpkin": 0.837,
+      "Dambulla|Cucumber": 0.837,
+      "Dambulla|Winged bean": 0.837,
+      "Dambulla|Green chilli": 0.837,
+      "Meegoda|Tomato": 0.965,
+      "Meegoda|Pumpkin": 0.918,
+      "Meegoda|Cucumber": 0.939,
+      "Meegoda|Winged bean": 0.939,
+      "Meegoda|Green chilli": 0.939,
+      "Narahenpita|Tomato": 1.0,
+      "Narahenpita|Pumpkin": 1.0,
+      "Narahenpita|Cucumber": 1.0,
+      "Narahenpita|Winged bean": 1.0,
+      "Narahenpita|Green chilli": 1.0,
+      "Thambuttegama|Tomato": 0.719,
+      "Thambuttegama|Pumpkin": 0.79,
+      "Thambuttegama|Cucumber": 0.75,
+      "Thambuttegama|Winged bean": 0.75,
+      "Thambuttegama|Green chilli": 0.75,
+      "Keppetipola|Tomato": 0.691,
+      "Keppetipola|Pumpkin": 0.848,
+      "Keppetipola|Cucumber": 0.754,
+      "Keppetipola|Winged bean": 0.754,
+      "Keppetipola|Green chilli": 0.754,
+      "Nuwara Eliya|Tomato": 0.801,
+      "Nuwara Eliya|Pumpkin": 0.946,
+      "Nuwara Eliya|Cucumber": 0.872,
+      "Nuwara Eliya|Winged bean": 0.872,
+      "Nuwara Eliya|Green chilli": 0.872,
+      "Bandarawela|Tomato": 0.729,
+      "Bandarawela|Pumpkin": 0.89,
+      "Bandarawela|Cucumber": 0.79,
+      "Bandarawela|Winged bean": 0.79,
+      "Bandarawela|Green chilli": 0.79,
+      "Embilipitiya|Tomato": 0.799,
+      "Embilipitiya|Pumpkin": 0.874,
+      "Embilipitiya|Cucumber": 0.825,
+      "Embilipitiya|Winged bean": 0.825,
+      "Embilipitiya|Green chilli": 0.825,
+      "Veyangoda|Tomato": 1.049,
+      "Veyangoda|Pumpkin": 1.027,
+      "Veyangoda|Cucumber": 1.037,
+      "Veyangoda|Winged bean": 1.037,
+      "Veyangoda|Green chilli": 1.037,
+      "Norochcholai|Tomato": 0.942,
+      "Norochcholai|Pumpkin": 0.949,
+      "Norochcholai|Cucumber": 0.95,
+      "Norochcholai|Winged bean": 0.95,
+      "Norochcholai|Green chilli": 0.95,
+      "Kandy|Tomato": 0.907,
+      "Kandy|Pumpkin": 0.9,
+      "Kandy|Cucumber": 0.9,
+      "Kandy|Winged bean": 0.9,
+      "Kandy|Green chilli": 0.9
+    },
+    "table": [
+      {
+        "economic_centre": "Dambulla",
+        "crop": "Tomato",
+        "wfp_market": "Economic Centre-Dambulla",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.87,
+        "wfp_months": 0,
+        "basis": "no overlapping WFP months; producing-area market mean"
+      },
+      {
+        "economic_centre": "Dambulla",
+        "crop": "Pumpkin",
+        "wfp_market": "Economic Centre-Dambulla",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.87,
+        "wfp_months": 0,
+        "basis": "no overlapping WFP months; producing-area market mean"
+      },
+      {
+        "economic_centre": "Dambulla",
+        "crop": "Cucumber",
+        "wfp_market": "Economic Centre-Dambulla",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.87,
+        "wfp_months": 0,
+        "basis": "no overlapping WFP months; producing-area market mean"
+      },
+      {
+        "economic_centre": "Dambulla",
+        "crop": "Winged bean",
+        "wfp_market": "Economic Centre-Dambulla",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.87,
+        "wfp_months": 0,
+        "basis": "no overlapping WFP months; producing-area market mean"
+      },
+      {
+        "economic_centre": "Dambulla",
+        "crop": "Green chilli",
+        "wfp_market": "Economic Centre-Dambulla",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.87,
+        "wfp_months": 0,
+        "basis": "no overlapping WFP months; producing-area market mean"
+      },
+      {
+        "economic_centre": "Meegoda",
+        "crop": "Tomato",
+        "wfp_market": "Meegoda(DEC)",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.961,
+        "wfp_months": 14,
+        "basis": "WFP observed months (interpolated between, 80% of deviation from market-crop mean kept)"
+      },
+      {
+        "economic_centre": "Meegoda",
+        "crop": "Pumpkin",
+        "wfp_market": "Meegoda(DEC)",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.905,
+        "wfp_months": 9,
+        "basis": "WFP observed months (interpolated between, 80% of deviation from market-crop mean kept)"
+      },
+      {
+        "economic_centre": "Meegoda",
+        "crop": "Cucumber",
+        "wfp_market": "Meegoda(DEC)",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.939,
+        "wfp_months": 0,
+        "basis": "WFP market-level mean of tomato and pumpkin ratios (no crop-specific WFP data)"
+      },
+      {
+        "economic_centre": "Meegoda",
+        "crop": "Winged bean",
+        "wfp_market": "Meegoda(DEC)",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.939,
+        "wfp_months": 0,
+        "basis": "WFP market-level mean of tomato and pumpkin ratios (no crop-specific WFP data)"
+      },
+      {
+        "economic_centre": "Meegoda",
+        "crop": "Green chilli",
+        "wfp_market": "Meegoda(DEC)",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.939,
+        "wfp_months": 0,
+        "basis": "WFP market-level mean of tomato and pumpkin ratios (no crop-specific WFP data)"
+      },
+      {
+        "economic_centre": "Narahenpita",
+        "crop": "Tomato",
+        "wfp_market": "Colombo City",
+        "proxy_market": true,
+        "mean_retail_ratio": 1.0,
+        "wfp_months": 23,
+        "basis": "WFP observed months (interpolated between, 80% of deviation from market-crop mean kept)"
+      },
+      {
+        "economic_centre": "Narahenpita",
+        "crop": "Pumpkin",
+        "wfp_market": "Colombo City",
+        "proxy_market": true,
+        "mean_retail_ratio": 1.0,
+        "wfp_months": 18,
+        "basis": "WFP observed months (interpolated between, 80% of deviation from market-crop mean kept)"
+      },
+      {
+        "economic_centre": "Narahenpita",
+        "crop": "Cucumber",
+        "wfp_market": "Colombo City",
+        "proxy_market": true,
+        "mean_retail_ratio": 1.0,
+        "wfp_months": 0,
+        "basis": "WFP market-level mean of tomato and pumpkin ratios (no crop-specific WFP data)"
+      },
+      {
+        "economic_centre": "Narahenpita",
+        "crop": "Winged bean",
+        "wfp_market": "Colombo City",
+        "proxy_market": true,
+        "mean_retail_ratio": 1.0,
+        "wfp_months": 0,
+        "basis": "WFP market-level mean of tomato and pumpkin ratios (no crop-specific WFP data)"
+      },
+      {
+        "economic_centre": "Narahenpita",
+        "crop": "Green chilli",
+        "wfp_market": "Colombo City",
+        "proxy_market": true,
+        "mean_retail_ratio": 1.0,
+        "wfp_months": 0,
+        "basis": "WFP market-level mean of tomato and pumpkin ratios (no crop-specific WFP data)"
+      },
+      {
+        "economic_centre": "Thambuttegama",
+        "crop": "Tomato",
+        "wfp_market": "Thambuttegama",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.744,
+        "wfp_months": 12,
+        "basis": "WFP observed months (interpolated between, 80% of deviation from market-crop mean kept)"
+      },
+      {
+        "economic_centre": "Thambuttegama",
+        "crop": "Pumpkin",
+        "wfp_market": "Thambuttegama",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.824,
+        "wfp_months": 10,
+        "basis": "WFP observed months (interpolated between, 80% of deviation from market-crop mean kept)"
+      },
+      {
+        "economic_centre": "Thambuttegama",
+        "crop": "Cucumber",
+        "wfp_market": "Thambuttegama",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.779,
+        "wfp_months": 0,
+        "basis": "WFP market-level mean of tomato and pumpkin ratios (no crop-specific WFP data)"
+      },
+      {
+        "economic_centre": "Thambuttegama",
+        "crop": "Winged bean",
+        "wfp_market": "Thambuttegama",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.779,
+        "wfp_months": 0,
+        "basis": "WFP market-level mean of tomato and pumpkin ratios (no crop-specific WFP data)"
+      },
+      {
+        "economic_centre": "Thambuttegama",
+        "crop": "Green chilli",
+        "wfp_market": "Thambuttegama",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.779,
+        "wfp_months": 0,
+        "basis": "WFP market-level mean of tomato and pumpkin ratios (no crop-specific WFP data)"
+      },
+      {
+        "economic_centre": "Keppetipola",
+        "crop": "Tomato",
+        "wfp_market": "Keppetipola (DEC}",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.717,
+        "wfp_months": 17,
+        "basis": "WFP observed months (interpolated between, 80% of deviation from market-crop mean kept)"
+      },
+      {
+        "economic_centre": "Keppetipola",
+        "crop": "Pumpkin",
+        "wfp_market": "Keppetipola (DEC}",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.879,
+        "wfp_months": 13,
+        "basis": "WFP observed months (interpolated between, 80% of deviation from market-crop mean kept)"
+      },
+      {
+        "economic_centre": "Keppetipola",
+        "crop": "Cucumber",
+        "wfp_market": "Keppetipola (DEC}",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.783,
+        "wfp_months": 0,
+        "basis": "WFP market-level mean of tomato and pumpkin ratios (no crop-specific WFP data)"
+      },
+      {
+        "economic_centre": "Keppetipola",
+        "crop": "Winged bean",
+        "wfp_market": "Keppetipola (DEC}",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.783,
+        "wfp_months": 0,
+        "basis": "WFP market-level mean of tomato and pumpkin ratios (no crop-specific WFP data)"
+      },
+      {
+        "economic_centre": "Keppetipola",
+        "crop": "Green chilli",
+        "wfp_market": "Keppetipola (DEC}",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.783,
+        "wfp_months": 0,
+        "basis": "WFP market-level mean of tomato and pumpkin ratios (no crop-specific WFP data)"
+      },
+      {
+        "economic_centre": "Nuwara Eliya",
+        "crop": "Tomato",
+        "wfp_market": "Nuwara Eliya",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.827,
+        "wfp_months": 15,
+        "basis": "WFP observed months (interpolated between, 80% of deviation from market-crop mean kept)"
+      },
+      {
+        "economic_centre": "Nuwara Eliya",
+        "crop": "Pumpkin",
+        "wfp_market": "Nuwara Eliya",
+        "proxy_market": false,
+        "mean_retail_ratio": 1.006,
+        "wfp_months": 13,
+        "basis": "WFP observed months (interpolated between, 80% of deviation from market-crop mean kept)"
+      },
+      {
+        "economic_centre": "Nuwara Eliya",
+        "crop": "Cucumber",
+        "wfp_market": "Nuwara Eliya",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.906,
+        "wfp_months": 0,
+        "basis": "WFP market-level mean of tomato and pumpkin ratios (no crop-specific WFP data)"
+      },
+      {
+        "economic_centre": "Nuwara Eliya",
+        "crop": "Winged bean",
+        "wfp_market": "Nuwara Eliya",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.906,
+        "wfp_months": 0,
+        "basis": "WFP market-level mean of tomato and pumpkin ratios (no crop-specific WFP data)"
+      },
+      {
+        "economic_centre": "Nuwara Eliya",
+        "crop": "Green chilli",
+        "wfp_market": "Nuwara Eliya",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.906,
+        "wfp_months": 0,
+        "basis": "WFP market-level mean of tomato and pumpkin ratios (no crop-specific WFP data)"
+      },
+      {
+        "economic_centre": "Bandarawela",
+        "crop": "Tomato",
+        "wfp_market": "Bandarawela",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.755,
+        "wfp_months": 18,
+        "basis": "WFP observed months (interpolated between, 80% of deviation from market-crop mean kept)"
+      },
+      {
+        "economic_centre": "Bandarawela",
+        "crop": "Pumpkin",
+        "wfp_market": "Bandarawela",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.921,
+        "wfp_months": 13,
+        "basis": "WFP observed months (interpolated between, 80% of deviation from market-crop mean kept)"
+      },
+      {
+        "economic_centre": "Bandarawela",
+        "crop": "Cucumber",
+        "wfp_market": "Bandarawela",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.821,
+        "wfp_months": 0,
+        "basis": "WFP market-level mean of tomato and pumpkin ratios (no crop-specific WFP data)"
+      },
+      {
+        "economic_centre": "Bandarawela",
+        "crop": "Winged bean",
+        "wfp_market": "Bandarawela",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.821,
+        "wfp_months": 0,
+        "basis": "WFP market-level mean of tomato and pumpkin ratios (no crop-specific WFP data)"
+      },
+      {
+        "economic_centre": "Bandarawela",
+        "crop": "Green chilli",
+        "wfp_market": "Bandarawela",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.821,
+        "wfp_months": 0,
+        "basis": "WFP market-level mean of tomato and pumpkin ratios (no crop-specific WFP data)"
+      },
+      {
+        "economic_centre": "Embilipitiya",
+        "crop": "Tomato",
+        "wfp_market": "Embilipitiya",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.828,
+        "wfp_months": 16,
+        "basis": "WFP observed months (interpolated between, 80% of deviation from market-crop mean kept)"
+      },
+      {
+        "economic_centre": "Embilipitiya",
+        "crop": "Pumpkin",
+        "wfp_market": "Embilipitiya",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.906,
+        "wfp_months": 10,
+        "basis": "WFP observed months (interpolated between, 80% of deviation from market-crop mean kept)"
+      },
+      {
+        "economic_centre": "Embilipitiya",
+        "crop": "Cucumber",
+        "wfp_market": "Embilipitiya",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.857,
+        "wfp_months": 0,
+        "basis": "WFP market-level mean of tomato and pumpkin ratios (no crop-specific WFP data)"
+      },
+      {
+        "economic_centre": "Embilipitiya",
+        "crop": "Winged bean",
+        "wfp_market": "Embilipitiya",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.857,
+        "wfp_months": 0,
+        "basis": "WFP market-level mean of tomato and pumpkin ratios (no crop-specific WFP data)"
+      },
+      {
+        "economic_centre": "Embilipitiya",
+        "crop": "Green chilli",
+        "wfp_market": "Embilipitiya",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.857,
+        "wfp_months": 0,
+        "basis": "WFP market-level mean of tomato and pumpkin ratios (no crop-specific WFP data)"
+      },
+      {
+        "economic_centre": "Veyangoda",
+        "crop": "Tomato",
+        "wfp_market": "Gampaha",
+        "proxy_market": true,
+        "mean_retail_ratio": 1.046,
+        "wfp_months": 10,
+        "basis": "WFP observed months (interpolated between, 80% of deviation from market-crop mean kept)"
+      },
+      {
+        "economic_centre": "Veyangoda",
+        "crop": "Pumpkin",
+        "wfp_market": "Gampaha",
+        "proxy_market": true,
+        "mean_retail_ratio": 1.031,
+        "wfp_months": 14,
+        "basis": "WFP observed months (interpolated between, 80% of deviation from market-crop mean kept)"
+      },
+      {
+        "economic_centre": "Veyangoda",
+        "crop": "Cucumber",
+        "wfp_market": "Gampaha",
+        "proxy_market": true,
+        "mean_retail_ratio": 1.037,
+        "wfp_months": 0,
+        "basis": "WFP market-level mean of tomato and pumpkin ratios (no crop-specific WFP data)"
+      },
+      {
+        "economic_centre": "Veyangoda",
+        "crop": "Winged bean",
+        "wfp_market": "Gampaha",
+        "proxy_market": true,
+        "mean_retail_ratio": 1.037,
+        "wfp_months": 0,
+        "basis": "WFP market-level mean of tomato and pumpkin ratios (no crop-specific WFP data)"
+      },
+      {
+        "economic_centre": "Veyangoda",
+        "crop": "Green chilli",
+        "wfp_market": "Gampaha",
+        "proxy_market": true,
+        "mean_retail_ratio": 1.037,
+        "wfp_months": 0,
+        "basis": "WFP market-level mean of tomato and pumpkin ratios (no crop-specific WFP data)"
+      },
+      {
+        "economic_centre": "Norochcholai",
+        "crop": "Tomato",
+        "wfp_market": "Puttalam",
+        "proxy_market": true,
+        "mean_retail_ratio": 1.011,
+        "wfp_months": 18,
+        "basis": "WFP observed months (interpolated between, 80% of deviation from market-crop mean kept)"
+      },
+      {
+        "economic_centre": "Norochcholai",
+        "crop": "Pumpkin",
+        "wfp_market": "Puttalam",
+        "proxy_market": true,
+        "mean_retail_ratio": 1.107,
+        "wfp_months": 15,
+        "basis": "WFP observed months (interpolated between, 80% of deviation from market-crop mean kept)"
+      },
+      {
+        "economic_centre": "Norochcholai",
+        "crop": "Cucumber",
+        "wfp_market": "Puttalam",
+        "proxy_market": true,
+        "mean_retail_ratio": 1.053,
+        "wfp_months": 0,
+        "basis": "WFP market-level mean of tomato and pumpkin ratios (no crop-specific WFP data)"
+      },
+      {
+        "economic_centre": "Norochcholai",
+        "crop": "Winged bean",
+        "wfp_market": "Puttalam",
+        "proxy_market": true,
+        "mean_retail_ratio": 1.053,
+        "wfp_months": 0,
+        "basis": "WFP market-level mean of tomato and pumpkin ratios (no crop-specific WFP data)"
+      },
+      {
+        "economic_centre": "Norochcholai",
+        "crop": "Green chilli",
+        "wfp_market": "Puttalam",
+        "proxy_market": true,
+        "mean_retail_ratio": 1.053,
+        "wfp_months": 0,
+        "basis": "WFP market-level mean of tomato and pumpkin ratios (no crop-specific WFP data)"
+      },
+      {
+        "economic_centre": "Kandy",
+        "crop": "Tomato",
+        "wfp_market": "Kandy",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.842,
+        "wfp_months": 15,
+        "basis": "WFP observed months (interpolated between, 80% of deviation from market-crop mean kept)"
+      },
+      {
+        "economic_centre": "Kandy",
+        "crop": "Pumpkin",
+        "wfp_market": "Kandy",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.802,
+        "wfp_months": 14,
+        "basis": "WFP observed months (interpolated between, 80% of deviation from market-crop mean kept)"
+      },
+      {
+        "economic_centre": "Kandy",
+        "crop": "Cucumber",
+        "wfp_market": "Kandy",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.822,
+        "wfp_months": 0,
+        "basis": "WFP market-level mean of tomato and pumpkin ratios (no crop-specific WFP data)"
+      },
+      {
+        "economic_centre": "Kandy",
+        "crop": "Winged bean",
+        "wfp_market": "Kandy",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.822,
+        "wfp_months": 0,
+        "basis": "WFP market-level mean of tomato and pumpkin ratios (no crop-specific WFP data)"
+      },
+      {
+        "economic_centre": "Kandy",
+        "crop": "Green chilli",
+        "wfp_market": "Kandy",
+        "proxy_market": false,
+        "mean_retail_ratio": 0.822,
+        "wfp_months": 0,
+        "basis": "WFP market-level mean of tomato and pumpkin ratios (no crop-specific WFP data)"
+      }
+    ]
+  },
+  "market_prices_weekly": {
+    "rows": 19656,
+    "combinations": 54,
+    "combination_basis": {
+      "Bandarawela|Cucumber": "supplied by footprint district(s): Monaragala",
+      "Bandarawela|Green chilli": "supplied by footprint district(s): Monaragala",
+      "Bandarawela|Pumpkin": "supplied by footprint district(s): Monaragala",
+      "Bandarawela|Tomato": "supplied by footprint district(s): Badulla",
+      "Dambulla|Cucumber": "supplied by footprint district(s): Ampara, Anuradhapura, Kurunegala, Monaragala, Puttalam",
+      "Dambulla|Green chilli": "supplied by footprint district(s): Ampara, Anuradhapura, Jaffna, Kurunegala, Monaragala, Puttalam",
+      "Dambulla|Pumpkin": "supplied by footprint district(s): Ampara, Anuradhapura, Kurunegala, Monaragala, Puttalam",
+      "Dambulla|Tomato": "supplied by footprint district(s): Kandy, Matale, Nuwara Eliya",
+      "Dambulla|Winged bean": "supplied by footprint district(s): Anuradhapura, Kurunegala, Matale",
+      "Embilipitiya|Cucumber": "supplied by footprint district(s): Ampara, Hambantota, Monaragala",
+      "Embilipitiya|Green chilli": "supplied by footprint district(s): Ampara, Hambantota, Monaragala",
+      "Embilipitiya|Pumpkin": "supplied by footprint district(s): Ampara, Hambantota, Monaragala",
+      "Embilipitiya|Tomato": "supplied by footprint district(s): Hambantota",
+      "Embilipitiya|Winged bean": "supplied by footprint district(s): Hambantota, Ratnapura",
+      "Kandy|Cucumber": "consumer-area market (receives supply from all regions)",
+      "Kandy|Green chilli": "consumer-area market (receives supply from all regions)",
+      "Kandy|Pumpkin": "consumer-area market (receives supply from all regions)",
+      "Kandy|Tomato": "consumer-area market (receives supply from all regions)",
+      "Kandy|Winged bean": "consumer-area market (receives supply from all regions)",
+      "Keppetipola|Pumpkin": "WFP reports pumpkin prices at this market (20 months)",
+      "Keppetipola|Tomato": "supplied by footprint district(s): Badulla, Nuwara Eliya",
+      "Meegoda|Cucumber": "consumer-area market (receives supply from all regions)",
+      "Meegoda|Green chilli": "consumer-area market (receives supply from all regions)",
+      "Meegoda|Pumpkin": "consumer-area market (receives supply from all regions)",
+      "Meegoda|Tomato": "consumer-area market (receives supply from all regions)",
+      "Meegoda|Winged bean": "consumer-area market (receives supply from all regions)",
+      "Narahenpita|Cucumber": "consumer-area market (receives supply from all regions)",
+      "Narahenpita|Green chilli": "consumer-area market (receives supply from all regions)",
+      "Narahenpita|Pumpkin": "consumer-area market (receives supply from all regions)",
+      "Narahenpita|Tomato": "consumer-area market (receives supply from all regions)",
+      "Narahenpita|Winged bean": "consumer-area market (receives supply from all regions)",
+      "Norochcholai|Cucumber": "supplied by footprint district(s): Puttalam",
+      "Norochcholai|Green chilli": "supplied by footprint district(s): Puttalam",
+      "Norochcholai|Pumpkin": "supplied by footprint district(s): Puttalam",
+      "Nuwara Eliya|Cucumber": "supplied by footprint district(s): Hambantota",
+      "Nuwara Eliya|Green chilli": "supplied by footprint district(s): Hambantota",
+      "Nuwara Eliya|Pumpkin": "supplied by footprint district(s): Hambantota",
+      "Nuwara Eliya|Tomato": "supplied by footprint district(s): Hambantota, Nuwara Eliya",
+      "Nuwara Eliya|Winged bean": "supplied by footprint district(s): Hambantota",
+      "Peliyagoda|Cucumber": "consumer-area market (receives supply from all regions)",
+      "Peliyagoda|Green chilli": "consumer-area market (receives supply from all regions)",
+      "Peliyagoda|Pumpkin": "consumer-area market (receives supply from all regions)",
+      "Peliyagoda|Tomato": "consumer-area market (receives supply from all regions)",
+      "Peliyagoda|Winged bean": "consumer-area market (receives supply from all regions)",
+      "Thambuttegama|Cucumber": "supplied by footprint district(s): Anuradhapura",
+      "Thambuttegama|Green chilli": "supplied by footprint district(s): Anuradhapura, Jaffna",
+      "Thambuttegama|Pumpkin": "supplied by footprint district(s): Anuradhapura",
+      "Thambuttegama|Tomato": "WFP reports tomato prices at this market (15 months)",
+      "Thambuttegama|Winged bean": "supplied by footprint district(s): Anuradhapura",
+      "Veyangoda|Cucumber": "consumer-area market (receives supply from all regions)",
+      "Veyangoda|Green chilli": "consumer-area market (receives supply from all regions)",
+      "Veyangoda|Pumpkin": "consumer-area market (receives supply from all regions)",
+      "Veyangoda|Tomato": "consumer-area market (receives supply from all regions)",
+      "Veyangoda|Winged bean": "consumer-area market (receives supply from all regions)"
+    }
+  },
+  "market_arrivals_weekly": {
+    "rows": 14104,
+    "combinations": 39
+  },
+  "v0_outputs": {
+    "c1_rows": 756,
+    "c1_glut_rate": 0.335,
+    "c2_rows": 402,
+    "entropy_weights": {
+      "price incentive": 0.104,
+      "planting target": 0.118,
+      "area momentum": 0.119,
+      "past profitability": 0.166,
+      "recent arrivals": 0.096,
+      "pre-season rainfall": 0.188,
+      "glut-prone season": 0.21
+    },
+    "c3_noise_tuning": [
+      [
+        0.0,
+        0.559
+      ],
+      [
+        0.4,
+        0.471
+      ],
+      [
+        0.7,
+        0.438
+      ],
+      [
+        1.0,
+        0.396
+      ]
+    ],
+    "c3_chosen_noise": 0.0,
+    "c3_model_macroF1_test": 0.559,
+    "c3_label_shares": {
+      "Low": 0.55,
+      "Medium": 0.299,
+      "High": 0.152
+    }
+  },
+  "seed": 20261018,
+  "footprint_pairs": 29,
+  "proposed_included": true,
+  "published_outputs_reapplied": []
+}

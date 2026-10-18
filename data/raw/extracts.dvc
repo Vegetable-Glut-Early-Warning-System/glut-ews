@@ -1,0 +1,6 @@
+outs:
+- md5: 0240393bf881efea2cfd89f0f59184fd.dir
+  size: 4236189
+  nfiles: 10
+  hash: md5
+  path: extracts

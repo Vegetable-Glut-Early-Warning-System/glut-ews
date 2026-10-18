@@ -1,165 +1,175 @@
 schema,table,object_type,column,dtype,description
-core,bridge_district_centre,table,district,VARCHAR,One of 25 administrative districts (canonical spelling)
-core,bridge_district_centre,table,economic_centre,VARCHAR,Dedicated economic centre (wholesale market)
-core,bridge_district_centre,table,weight,DOUBLE,Share of the district’s DEC-bound output going to the centre
-core,bridge_district_centre,table,provenance,VARCHAR,observed | estimated | synthetic | missing (see README)
-core,cost_season,table,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct–Mar) or 2025 Yala (Apr–Sep)"
+core,bridge_district_centre,table,district,VARCHAR,Administrative district (canonical spelling)
+core,bridge_district_centre,table,economic_centre,VARCHAR,Dedicated economic centre
+core,bridge_district_centre,table,weight,DOUBLE,Share of the district's DEC-bound output going to the centre
+core,cost_season,table,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct-Mar) or 2025 Yala (Apr-Sep)"
 core,cost_season,table,crop,VARCHAR,"Tomato, Pumpkin, Cucumber, Winged bean, Green chilli"
-core,cost_season,table,farmgate_rs_kg,DOUBLE,"Farm-gate price (Rs/kg), mean of surveyed districts"
+core,cost_season,table,farmgate_rs_kg,DOUBLE,Farm-gate price (Rs/kg)
 core,cost_season,table,unit_cost_rs_kg,DOUBLE,Cost of production per kg incl. imputed cost (Rs/kg)
-core,cost_season,table,provenance,VARCHAR,observed | estimated | synthetic | missing (see README)
-core,cost_season,table,note,VARCHAR,Explanation for non-observed values
-core,dim_calendar,table,week_start_date,DATE,Start date of 7-day week block (week 1 starts 1 Jan; week 52 spans 8–9 days)
-core,dim_calendar,table,year,BIGINT,Calendar year
-core,dim_calendar,table,week,BIGINT,Week number 1–52
-core,dim_calendar,table,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct–Mar) or 2025 Yala (Apr–Sep)"
+core,dim_calendar,table,week_start_date,DATE,Start of 7-day week block (week 1 starts 1 Jan; week 52 spans 8-9 days)
+core,dim_calendar,table,year,INTEGER,Calendar year
+core,dim_calendar,table,week,INTEGER,Week number 1-52
+core,dim_calendar,table,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct-Mar) or 2025 Yala (Apr-Sep)"
 core,dim_calendar,table,season_type,VARCHAR,Maha or Yala
 core,dim_calendar,table,month,INTEGER,
-core,dim_calendar,table,is_harvest_week,BOOLEAN,True if week falls in a harvest window
-core,dim_calendar,table,harvest_of_season,VARCHAR,Season whose harvest the week belongs to
+core,dim_calendar,table,is_harvest_week,BOOLEAN,
+core,dim_calendar,table,harvest_of_season,VARCHAR,
 core,dim_crop,table,crop,VARCHAR,"Tomato, Pumpkin, Cucumber, Winged bean, Green chilli"
 core,dim_crop,table,crop_group,VARCHAR,
 core,dim_crop,table,harti_item_name,VARCHAR,
-core,dim_district,table,district,VARCHAR,One of 25 administrative districts (canonical spelling)
-core,dim_district,table,province,VARCHAR,Province
-core,dim_district,table,climatic_zone,VARCHAR,Wet / Intermediate / Dry / Up-country
-core,dim_district,table,latitude,DOUBLE,Latitude
-core,dim_district,table,longitude,DOUBLE,Longitude
-core,dim_district,table,elevation_m,BIGINT,Elevation (m)
-core,dim_economic_centre,table,economic_centre,VARCHAR,Dedicated economic centre (wholesale market)
-core,dim_economic_centre,table,located_in_district,VARCHAR,District where the centre is located
-core,dim_economic_centre,table,centre_type,VARCHAR,Producing-area or consumer-area market
-core,dim_season,table,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct–Mar) or 2025 Yala (Apr–Sep)"
+core,dim_crop_district,table,crop,VARCHAR,"Tomato, Pumpkin, Cucumber, Winged bean, Green chilli"
+core,dim_crop_district,table,district,VARCHAR,Administrative district (canonical spelling)
+core,dim_crop_district,table,status,VARCHAR,core (team field list) or proposed (added on evidence)
+core,dim_crop_district,table,justification,VARCHAR,Why the district is in the footprint
+core,dim_crop_district,table,source,VARCHAR,Evidence / source
+core,dim_district,table,district,VARCHAR,Administrative district (canonical spelling)
+core,dim_district,table,province,VARCHAR,
+core,dim_district,table,climatic_zone,VARCHAR,
+core,dim_district,table,latitude,DOUBLE,
+core,dim_district,table,longitude,DOUBLE,
+core,dim_district,table,elevation_m,INTEGER,
+core,dim_economic_centre,table,economic_centre,VARCHAR,Dedicated economic centre
+core,dim_economic_centre,table,located_in_district,VARCHAR,
+core,dim_economic_centre,table,centre_type,VARCHAR,
+core,dim_season,table,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct-Mar) or 2025 Yala (Apr-Sep)"
 core,dim_season,table,season_type,VARCHAR,Maha or Yala
-core,dim_season,table,season_year,BIGINT,Starting calendar year of the season
-core,dim_season,table,season_start,DATE,First day of season
-core,dim_season,table,season_end,DATE,Last day of season
-core,dim_season,table,planting_months,VARCHAR,Planting window
-core,dim_season,table,harvest_months,VARCHAR,Harvest window used for season aggregates
+core,dim_season,table,season_year,INTEGER,Starting calendar year of the season
+core,dim_season,table,season_start,DATE,
+core,dim_season,table,season_end,DATE,
+core,dim_season,table,planting_months,VARCHAR,
+core,dim_season,table,harvest_months,VARCHAR,
 core,dim_season,table,split,VARCHAR,"train / validation / test (season-based, shared by all modules)"
-core,harvest_weekly_national,table,week_start_date,DATE,Start date of 7-day week block (week 1 starts 1 Jan; week 52 spans 8–9 days)
+core,harvest_weekly_national,table,week_start_date,DATE,Start of 7-day week block (week 1 starts 1 Jan; week 52 spans 8-9 days)
 core,harvest_weekly_national,table,crop,VARCHAR,"Tomato, Pumpkin, Cucumber, Winged bean, Green chilli"
-core,harvest_weekly_national,table,harvest_t,DOUBLE,Weekly national harvest (tonnes)
-core,harvest_weekly_national,table,farm_transport_loss_t,DOUBLE,Weekly loss before reaching market (tonnes)
-core,harvest_weekly_national,table,provenance,VARCHAR,observed | estimated | synthetic | missing (see README)
+core,harvest_weekly_national,table,harvest_t,DOUBLE,Weekly national harvest (t)
+core,harvest_weekly_national,table,farm_transport_loss_t,DOUBLE,Weekly loss before reaching market (t)
 core,known_issues,table,issue_id,VARCHAR,
 core,known_issues,table,table,VARCHAR,
 core,known_issues,table,issue,VARCHAR,
 core,known_issues,table,core_handling,VARCHAR,
 core,macro_monthly,table,month,VARCHAR,
 core,macro_monthly,table,ccpi_2021_100,DOUBLE,Colombo Consumer Price Index (2021=100)
-core,macro_monthly,table,provenance,VARCHAR,observed | estimated | synthetic | missing (see README)
-core,market_arrivals_weekly,table,week_start_date,DATE,Start date of 7-day week block (week 1 starts 1 Jan; week 52 spans 8–9 days)
-core,market_arrivals_weekly,table,economic_centre,VARCHAR,Dedicated economic centre (wholesale market)
+core,market_arrivals_weekly,table,week_start_date,DATE,Start of 7-day week block (week 1 starts 1 Jan; week 52 spans 8-9 days)
+core,market_arrivals_weekly,table,economic_centre,VARCHAR,Dedicated economic centre
 core,market_arrivals_weekly,table,crop,VARCHAR,"Tomato, Pumpkin, Cucumber, Winged bean, Green chilli"
-core,market_arrivals_weekly,table,arrivals_t,DOUBLE,Weekly arrivals at the centre (tonnes)
-core,market_arrivals_weekly,table,wastage_t,DOUBLE,Weekly market wastage at the centre (tonnes)
-core,market_arrivals_weekly,table,provenance,VARCHAR,observed | estimated | synthetic | missing (see README)
-core,market_prices_weekly,table,week_start_date,DATE,Start date of 7-day week block (week 1 starts 1 Jan; week 52 spans 8–9 days)
-core,market_prices_weekly,table,economic_centre,VARCHAR,Dedicated economic centre (wholesale market)
+core,market_arrivals_weekly,table,arrivals_t,DOUBLE,Weekly arrivals at the centre (t)
+core,market_arrivals_weekly,table,wastage_t,DOUBLE,Weekly market wastage at the centre (t)
+core,market_prices_weekly,table,week_start_date,DATE,Start of 7-day week block (week 1 starts 1 Jan; week 52 spans 8-9 days)
+core,market_prices_weekly,table,economic_centre,VARCHAR,Dedicated economic centre
 core,market_prices_weekly,table,crop,VARCHAR,"Tomato, Pumpkin, Cucumber, Winged bean, Green chilli"
 core,market_prices_weekly,table,wholesale_price_rs_kg,DOUBLE,Weekly average wholesale price (Rs/kg)
 core,market_prices_weekly,table,retail_price_rs_kg,DOUBLE,Weekly average retail price (Rs/kg)
-core,market_prices_weekly,table,provenance,VARCHAR,observed | estimated | synthetic | missing (see README)
 core,model_parameters,table,parameter,VARCHAR,
 core,model_parameters,table,crop,VARCHAR,"Tomato, Pumpkin, Cucumber, Winged bean, Green chilli"
 core,model_parameters,table,value,VARCHAR,
 core,model_parameters,table,low,DOUBLE,
 core,model_parameters,table,high,DOUBLE,
-core,model_parameters,table,source,VARCHAR,
-core,model_parameters,table,provenance,VARCHAR,observed | estimated | synthetic | missing (see README)
-core,national_supply_season,table,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct–Mar) or 2025 Yala (Apr–Sep)"
+core,model_parameters,table,source,VARCHAR,Evidence / source
+core,national_supply_season,table,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct-Mar) or 2025 Yala (Apr-Sep)"
 core,national_supply_season,table,crop,VARCHAR,"Tomato, Pumpkin, Cucumber, Winged bean, Green chilli"
-core,national_supply_season,table,extent_ha,DOUBLE,Cultivated extent (hectares)
-core,national_supply_season,table,production_t,DOUBLE,Production (tonnes)
-core,national_supply_season,table,yield_t_ha,DOUBLE,Yield (tonnes per hectare)
-core,national_supply_season,table,provenance,VARCHAR,observed | estimated | synthetic | missing (see README)
-core,national_supply_season,table,note,VARCHAR,Explanation for non-observed values
-core,planting_target_season,table,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct–Mar) or 2025 Yala (Apr–Sep)"
-core,planting_target_season,table,district,VARCHAR,One of 25 administrative districts (canonical spelling)
+core,national_supply_season,table,extent_ha,DOUBLE,Cultivated extent (ha)
+core,national_supply_season,table,production_t,DOUBLE,Production (t)
+core,national_supply_season,table,yield_t_ha,DOUBLE,Yield (t/ha)
+core,planting_target_season,table,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct-Mar) or 2025 Yala (Apr-Sep)"
+core,planting_target_season,table,district,VARCHAR,Administrative district (canonical spelling)
 core,planting_target_season,table,crop,VARCHAR,"Tomato, Pumpkin, Cucumber, Winged bean, Green chilli"
-core,planting_target_season,table,target_ha,DOUBLE,DOA planting target (hectares)
-core,planting_target_season,table,provenance,VARCHAR,observed | estimated | synthetic | missing (see README)
-core,supply_season,table,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct–Mar) or 2025 Yala (Apr–Sep)"
-core,supply_season,table,district,VARCHAR,One of 25 administrative districts (canonical spelling)
+core,planting_target_season,table,target_ha,DOUBLE,DOA planting target (ha)
+core,supply_season,table,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct-Mar) or 2025 Yala (Apr-Sep)"
+core,supply_season,table,district,VARCHAR,Administrative district (canonical spelling)
 core,supply_season,table,crop,VARCHAR,"Tomato, Pumpkin, Cucumber, Winged bean, Green chilli"
-core,supply_season,table,extent_ha,DOUBLE,Cultivated extent (hectares)
-core,supply_season,table,production_t,DOUBLE,Production (tonnes)
-core,supply_season,table,yield_t_ha,DOUBLE,Yield (tonnes per hectare)
-core,supply_season,table,provenance,VARCHAR,observed | estimated | synthetic | missing (see README)
+core,supply_season,table,extent_ha,DOUBLE,Cultivated extent (ha)
+core,supply_season,table,production_t,DOUBLE,Production (t)
+core,supply_season,table,yield_t_ha,DOUBLE,Yield (t/ha)
 core,weather_daily,table,date,DATE,
-core,weather_daily,table,district,VARCHAR,One of 25 administrative districts (canonical spelling)
+core,weather_daily,table,district,VARCHAR,Administrative district (canonical spelling)
 core,weather_daily,table,rainfall_mm,DOUBLE,Rainfall (mm)
-core,weather_daily,table,temp_mean_c,DOUBLE,Mean air temperature (°C)
-core,weather_daily,table,temp_max_c,DOUBLE,Maximum air temperature (°C)
+core,weather_daily,table,temp_mean_c,DOUBLE,Mean air temperature (C)
+core,weather_daily,table,temp_max_c,DOUBLE,Maximum air temperature (C)
 core,weather_daily,table,et0_mm,DOUBLE,FAO reference evapotranspiration (mm)
-core,weather_daily,table,provenance,VARCHAR,observed | estimated | synthetic | missing (see README)
-outputs,c1_glut_season,table,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct–Mar) or 2025 Yala (Apr–Sep)"
-outputs,c1_glut_season,table,economic_centre,VARCHAR,Dedicated economic centre (wholesale market)
+outputs,c1_glut_season,table,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct-Mar) or 2025 Yala (Apr-Sep)"
+outputs,c1_glut_season,table,economic_centre,VARCHAR,Dedicated economic centre
 outputs,c1_glut_season,table,crop,VARCHAR,"Tomato, Pumpkin, Cucumber, Winged bean, Green chilli"
-outputs,c1_glut_season,table,glut_weeks,BIGINT,Harvest-window weeks with seasonally-adjusted real price < 70% of normal
-outputs,c1_glut_season,table,weeks_observed,BIGINT,Harvest-window weeks with a price observation
-outputs,c1_glut_season,table,historical_glut_label,VARCHAR,"Glut if glut_weeks ≥ 4, else No glut"
+outputs,c1_glut_season,table,glut_weeks,INTEGER,Harvest-window weeks with seasonally adjusted real price < 70% of normal
+outputs,c1_glut_season,table,historical_glut_label,VARCHAR,"Glut if glut_weeks >= 4, else No glut"
 outputs,c1_glut_season,table,cobweb_index,DOUBLE,ln(previous-season harvest real price / mean of the 3 seasons before it)
-outputs,c1_glut_season,table,source_version,VARCHAR,placeholder_v0 until replaced by the real module output
-outputs,c2_pressure_score,table,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct–Mar) or 2025 Yala (Apr–Sep)"
-outputs,c2_pressure_score,table,district,VARCHAR,One of 25 administrative districts (canonical spelling)
+outputs,c1_glut_season,table,weeks_observed,INTEGER,Harvest-window weeks with a price
+outputs,c1_glut_season,table,source_version,VARCHAR,Output version (v0 = generated starting output; v1+ = module result)
+outputs,c2_pressure_score,table,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct-Mar) or 2025 Yala (Apr-Sep)"
+outputs,c2_pressure_score,table,district,VARCHAR,Administrative district (canonical spelling)
 outputs,c2_pressure_score,table,crop,VARCHAR,"Tomato, Pumpkin, Cucumber, Winged bean, Green chilli"
-outputs,c2_pressure_score,table,supply_pressure_score,DOUBLE,0–100 entropy-weighted pre-planting supply pressure score
+outputs,c2_pressure_score,table,supply_pressure_score,DOUBLE,0-100 entropy-weighted pre-planting supply pressure score
 outputs,c2_pressure_score,table,pressure_class,VARCHAR,Low / Medium / High (50th / 80th percentile)
-outputs,c2_pressure_score,table,source_version,VARCHAR,placeholder_v0 until replaced by the real module output
-outputs,c3_risk_prediction,table,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct–Mar) or 2025 Yala (Apr–Sep)"
-outputs,c3_risk_prediction,table,district,VARCHAR,One of 25 administrative districts (canonical spelling)
+outputs,c2_pressure_score,table,top_drivers,VARCHAR,Largest contributions to the score
+outputs,c2_pressure_score,table,source_version,VARCHAR,Output version (v0 = generated starting output; v1+ = module result)
+outputs,c3_risk_prediction,table,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct-Mar) or 2025 Yala (Apr-Sep)"
+outputs,c3_risk_prediction,table,district,VARCHAR,Administrative district (canonical spelling)
 outputs,c3_risk_prediction,table,crop,VARCHAR,"Tomato, Pumpkin, Cucumber, Winged bean, Green chilli"
 outputs,c3_risk_prediction,table,predicted_risk_label,VARCHAR,Predicted glut risk class
 outputs,c3_risk_prediction,table,prob_low,DOUBLE,Predicted probability Low
 outputs,c3_risk_prediction,table,prob_medium,DOUBLE,Predicted probability Medium
 outputs,c3_risk_prediction,table,prob_high,DOUBLE,Predicted probability High
-outputs,c3_risk_prediction,table,source_version,VARCHAR,placeholder_v0 until replaced by the real module output
-outputs,c3_training_label,table,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct–Mar) or 2025 Yala (Apr–Sep)"
-outputs,c3_training_label,table,district,VARCHAR,One of 25 administrative districts (canonical spelling)
+outputs,c3_risk_prediction,table,top_reasons,VARCHAR,Plain-language reasons for the prediction
+outputs,c3_risk_prediction,table,source_version,VARCHAR,Output version (v0 = generated starting output; v1+ = module result)
+outputs,c3_training_label,table,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct-Mar) or 2025 Yala (Apr-Sep)"
+outputs,c3_training_label,table,district,VARCHAR,Administrative district (canonical spelling)
 outputs,c3_training_label,table,crop,VARCHAR,"Tomato, Pumpkin, Cucumber, Winged bean, Green chilli"
 outputs,c3_training_label,table,glut_risk_label,VARCHAR,Realised glut risk class: Low / Medium / High
-outputs,c3_training_label,table,source_version,VARCHAR,placeholder_v0 until replaced by the real module output
-raw,agstat_annual_prices,table,source,VARCHAR,
+outputs,c3_training_label,table,source_version,VARCHAR,Output version (v0 = generated starting output; v1+ = module result)
+outputs,c4_advisory,table,plan_season,VARCHAR,
+outputs,c4_advisory,table,district,VARCHAR,Administrative district (canonical spelling)
+outputs,c4_advisory,table,crop,VARCHAR,"Tomato, Pumpkin, Cucumber, Winged bean, Green chilli"
+outputs,c4_advisory,table,recent_avg_extent_ha,DOUBLE,
+outputs,c4_advisory,table,recommended_ha,DOUBLE,
+outputs,c4_advisory,table,change_pct,DOUBLE,
+outputs,c4_advisory,table,action,VARCHAR,
+outputs,c4_advisory,table,suggested_alternatives,VARCHAR,
+outputs,c4_advisory,table,explanation,VARCHAR,
+outputs,c4_advisory,table,source_version,VARCHAR,Output version (v0 = generated starting output; v1+ = module result)
+raw,agstat_annual_prices,table,source,VARCHAR,Evidence / source
 raw,agstat_annual_prices,table,crop_name,VARCHAR,
 raw,agstat_annual_prices,table,year,BIGINT,Calendar year
-raw,agstat_annual_prices,table,farmgate_rs_kg,DOUBLE,"Farm-gate price (Rs/kg), mean of surveyed districts"
+raw,agstat_annual_prices,table,farmgate_rs_kg,DOUBLE,Farm-gate price (Rs/kg)
 raw,agstat_annual_prices,table,retail_rs_kg,DOUBLE,
-raw,agstat_dcs_national_seasonal,table,source,VARCHAR,
+raw,agstat_dcs_national_seasonal,table,source,VARCHAR,Evidence / source
 raw,agstat_dcs_national_seasonal,table,crop_name,VARCHAR,
-raw,agstat_dcs_national_seasonal,table,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct–Mar) or 2025 Yala (Apr–Sep)"
-raw,agstat_dcs_national_seasonal,table,extent_ha,DOUBLE,Cultivated extent (hectares)
-raw,agstat_dcs_national_seasonal,table,production_t,DOUBLE,Production (tonnes)
+raw,agstat_dcs_national_seasonal,table,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct-Mar) or 2025 Yala (Apr-Sep)"
+raw,agstat_dcs_national_seasonal,table,extent_ha,DOUBLE,Cultivated extent (ha)
+raw,agstat_dcs_national_seasonal,table,production_t,DOUBLE,Production (t)
 raw,ccpi_anchors,table,month,VARCHAR,
 raw,ccpi_anchors,table,ccpi_2021_100,DOUBLE,Colombo Consumer Price Index (2021=100)
 raw,cf_district_tables,table,source_file,VARCHAR,
 raw,cf_district_tables,table,report_year,BIGINT,
 raw,cf_district_tables,table,report_month,BIGINT,
-raw,cf_district_tables,table,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct–Mar) or 2025 Yala (Apr–Sep)"
+raw,cf_district_tables,table,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct-Mar) or 2025 Yala (Apr-Sep)"
 raw,cf_district_tables,table,crop,VARCHAR,"Tomato, Pumpkin, Cucumber, Winged bean, Green chilli"
 raw,cf_district_tables,table,district_raw,VARCHAR,
 raw,cf_district_tables,table,admin_area,VARCHAR,
-raw,cf_district_tables,table,target_ha,DOUBLE,DOA planting target (hectares)
+raw,cf_district_tables,table,target_ha,DOUBLE,DOA planting target (ha)
 raw,cf_district_tables,table,cultivated_ha,DOUBLE,
 raw,cf_district_tables,table,expected_production_t,DOUBLE,
 raw,cf_national_winged_bean,table,source_file,VARCHAR,
-raw,cf_national_winged_bean,table,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct–Mar) or 2025 Yala (Apr–Sep)"
-raw,cf_national_winged_bean,table,target_ha,DOUBLE,DOA planting target (hectares)
+raw,cf_national_winged_bean,table,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct-Mar) or 2025 Yala (Apr-Sep)"
+raw,cf_national_winged_bean,table,target_ha,DOUBLE,DOA planting target (ha)
 raw,cf_national_winged_bean,table,cultivated_ha,BIGINT,
 raw,cf_national_winged_bean,table,expected_production_t,DOUBLE,
 raw,cost_of_cultivation,table,source_file,VARCHAR,
-raw,cost_of_cultivation,table,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct–Mar) or 2025 Yala (Apr–Sep)"
+raw,cost_of_cultivation,table,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct-Mar) or 2025 Yala (Apr-Sep)"
 raw,cost_of_cultivation,table,crop,VARCHAR,"Tomato, Pumpkin, Cucumber, Winged bean, Green chilli"
-raw,cost_of_cultivation,table,district,VARCHAR,One of 25 administrative districts (canonical spelling)
+raw,cost_of_cultivation,table,district,VARCHAR,Administrative district (canonical spelling)
 raw,cost_of_cultivation,table,water_regime,VARCHAR,
 raw,cost_of_cultivation,table,yield_kg_per_acre,VARCHAR,
-raw,cost_of_cultivation,table,farmgate_rs_kg,VARCHAR,"Farm-gate price (Rs/kg), mean of surveyed districts"
+raw,cost_of_cultivation,table,farmgate_rs_kg,VARCHAR,Farm-gate price (Rs/kg)
 raw,cost_of_cultivation,table,unit_cost_rs_kg,VARCHAR,Cost of production per kg incl. imputed cost (Rs/kg)
 raw,cost_of_cultivation,table,profit_rs_per_acre,VARCHAR,
 raw,cost_of_cultivation,table,total_cost_rs_per_acre,DOUBLE,
 raw,cost_of_cultivation,table,net_return_rs_per_acre,DOUBLE,
-raw,harti_rr247_dambulla_share,table,district,VARCHAR,One of 25 administrative districts (canonical spelling)
+raw,dcs_weekly_retail_prices,table,Week,VARCHAR,
+raw,dcs_weekly_retail_prices,table,Item,VARCHAR,
+raw,dcs_weekly_retail_prices,table,Unit,VARCHAR,
+raw,dcs_weekly_retail_prices,table,Avg Price (Rs.),VARCHAR,
+raw,dcs_weekly_retail_prices,table,Price Range - low (Rs.),VARCHAR,
+raw,dcs_weekly_retail_prices,table,Price Range - High (Rs.),VARCHAR,
+raw,harti_rr247_dambulla_share,table,district,VARCHAR,Administrative district (canonical spelling)
 raw,harti_rr247_dambulla_share,table,share_of_output_to_dambulla,DOUBLE,
 raw,harti_weekly_prices,table,source_file,VARCHAR,
 raw,harti_weekly_prices,table,market,VARCHAR,
@@ -190,19 +200,35 @@ raw,weather_daily,table,et0_fao_evapotranspiration_mm,DOUBLE,
 raw,weather_daily,table,sunrise,VARCHAR,
 raw,weather_daily,table,sunset,VARCHAR,
 raw,weather_locations,table,location_id,BIGINT,
-raw,weather_locations,table,latitude,DOUBLE,Latitude
-raw,weather_locations,table,longitude,DOUBLE,Longitude
+raw,weather_locations,table,latitude,DOUBLE,
+raw,weather_locations,table,longitude,DOUBLE,
 raw,weather_locations,table,elevation,BIGINT,
 raw,weather_locations,table,utc_offset_seconds,BIGINT,
 raw,weather_locations,table,timezone,VARCHAR,
 raw,weather_locations,table,timezone_abbreviation,BIGINT,
 raw,weather_locations,table,city_name,VARCHAR,
-views,component1_dataset,view,year,BIGINT,Calendar year
-views,component1_dataset,view,week,BIGINT,Week number 1–52
-views,component1_dataset,view,week_start_date,DATE,Start date of 7-day week block (week 1 starts 1 Jan; week 52 spans 8–9 days)
-views,component1_dataset,view,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct–Mar) or 2025 Yala (Apr–Sep)"
+raw,wfp_market_prices,table,date,DATE,
+raw,wfp_market_prices,table,admin1,VARCHAR,
+raw,wfp_market_prices,table,admin2,VARCHAR,
+raw,wfp_market_prices,table,market,VARCHAR,
+raw,wfp_market_prices,table,market_id,BIGINT,
+raw,wfp_market_prices,table,latitude,DOUBLE,
+raw,wfp_market_prices,table,longitude,DOUBLE,
+raw,wfp_market_prices,table,category,VARCHAR,
+raw,wfp_market_prices,table,commodity,VARCHAR,
+raw,wfp_market_prices,table,commodity_id,BIGINT,
+raw,wfp_market_prices,table,unit,VARCHAR,
+raw,wfp_market_prices,table,priceflag,VARCHAR,
+raw,wfp_market_prices,table,pricetype,VARCHAR,
+raw,wfp_market_prices,table,currency,VARCHAR,
+raw,wfp_market_prices,table,price,DOUBLE,
+raw,wfp_market_prices,table,usdprice,DOUBLE,
+views,component1_dataset,view,year,INTEGER,Calendar year
+views,component1_dataset,view,week,INTEGER,Week number 1-52
+views,component1_dataset,view,week_start_date,DATE,Start of 7-day week block (week 1 starts 1 Jan; week 52 spans 8-9 days)
+views,component1_dataset,view,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct-Mar) or 2025 Yala (Apr-Sep)"
 views,component1_dataset,view,season_type,VARCHAR,Maha or Yala
-views,component1_dataset,view,economic_centre,VARCHAR,Dedicated economic centre (wholesale market)
+views,component1_dataset,view,economic_centre,VARCHAR,Dedicated economic centre
 views,component1_dataset,view,crop,VARCHAR,"Tomato, Pumpkin, Cucumber, Winged bean, Green chilli"
 views,component1_dataset,view,wholesale_price_rs_kg,DOUBLE,Weekly average wholesale price (Rs/kg)
 views,component1_dataset,view,retail_price_rs_kg,DOUBLE,Weekly average retail price (Rs/kg)
@@ -213,16 +239,16 @@ views,component1_dataset,view,season_extent_ha,DOUBLE,
 views,component1_dataset,view,season_production_t,DOUBLE,
 views,component1_dataset,view,rainfall_mm,DOUBLE,Rainfall (mm)
 views,component1_dataset,view,temperature_c,DOUBLE,
-views,component2_dataset,view,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct–Mar) or 2025 Yala (Apr–Sep)"
+views,component2_dataset,view,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct-Mar) or 2025 Yala (Apr-Sep)"
 views,component2_dataset,view,season_type,VARCHAR,Maha or Yala
-views,component2_dataset,view,season_year,BIGINT,Starting calendar year of the season
-views,component2_dataset,view,district,VARCHAR,One of 25 administrative districts (canonical spelling)
-views,component2_dataset,view,economic_centre,VARCHAR,Dedicated economic centre (wholesale market)
+views,component2_dataset,view,season_year,INTEGER,Starting calendar year of the season
+views,component2_dataset,view,district,VARCHAR,Administrative district (canonical spelling)
+views,component2_dataset,view,economic_centre,VARCHAR,Dedicated economic centre
 views,component2_dataset,view,crop,VARCHAR,"Tomato, Pumpkin, Cucumber, Winged bean, Green chilli"
 views,component2_dataset,view,cultivated_extent_ha,DOUBLE,
 views,component2_dataset,view,target_extent_ha,DOUBLE,
-views,component2_dataset,view,production_t,DOUBLE,Production (tonnes)
-views,component2_dataset,view,yield_t_ha,DOUBLE,Yield (tonnes per hectare)
+views,component2_dataset,view,production_t,DOUBLE,Production (t)
+views,component2_dataset,view,yield_t_ha,DOUBLE,Yield (t/ha)
 views,component2_dataset,view,farmgate_price_rs_kg,DOUBLE,
 views,component2_dataset,view,unit_cost_rs_kg,DOUBLE,Cost of production per kg incl. imputed cost (Rs/kg)
 views,component2_dataset,view,harvest_wholesale_price_rs_kg,DOUBLE,
@@ -231,20 +257,20 @@ views,component2_dataset,view,season_rainfall_mm,DOUBLE,
 views,component2_dataset,view,preseason_rainfall_mm,DOUBLE,
 views,component2_dataset,view,rain_days,HUGEINT,
 views,component2_dataset,view,heavy_rain_days,HUGEINT,
-views,component2_dataset,view,temp_mean_c,DOUBLE,Mean air temperature (°C)
+views,component2_dataset,view,temp_mean_c,DOUBLE,Mean air temperature (C)
 views,component2_dataset,view,et0_mm,DOUBLE,FAO reference evapotranspiration (mm)
-views,component2_dataset,view,historical_glut_label,VARCHAR,"Glut if glut_weeks ≥ 4, else No glut"
+views,component2_dataset,view,historical_glut_label,VARCHAR,"Glut if glut_weeks >= 4, else No glut"
 views,component2_dataset,view,cobweb_index,DOUBLE,ln(previous-season harvest real price / mean of the 3 seasons before it)
-views,component3_dataset,view,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct–Mar) or 2025 Yala (Apr–Sep)"
+views,component3_dataset,view,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct-Mar) or 2025 Yala (Apr-Sep)"
 views,component3_dataset,view,season_type,VARCHAR,Maha or Yala
-views,component3_dataset,view,season_year,BIGINT,Starting calendar year of the season
-views,component3_dataset,view,district,VARCHAR,One of 25 administrative districts (canonical spelling)
-views,component3_dataset,view,economic_centre,VARCHAR,Dedicated economic centre (wholesale market)
+views,component3_dataset,view,season_year,INTEGER,Starting calendar year of the season
+views,component3_dataset,view,district,VARCHAR,Administrative district (canonical spelling)
+views,component3_dataset,view,economic_centre,VARCHAR,Dedicated economic centre
 views,component3_dataset,view,crop,VARCHAR,"Tomato, Pumpkin, Cucumber, Winged bean, Green chilli"
 views,component3_dataset,view,cultivated_extent_ha,DOUBLE,
 views,component3_dataset,view,target_extent_ha,DOUBLE,
-views,component3_dataset,view,production_t,DOUBLE,Production (tonnes)
-views,component3_dataset,view,yield_t_ha,DOUBLE,Yield (tonnes per hectare)
+views,component3_dataset,view,production_t,DOUBLE,Production (t)
+views,component3_dataset,view,yield_t_ha,DOUBLE,Yield (t/ha)
 views,component3_dataset,view,farmgate_price_rs_kg,DOUBLE,
 views,component3_dataset,view,unit_cost_rs_kg,DOUBLE,Cost of production per kg incl. imputed cost (Rs/kg)
 views,component3_dataset,view,harvest_wholesale_mean_rs_kg,DOUBLE,
@@ -257,26 +283,26 @@ views,component3_dataset,view,season_rainfall_mm,DOUBLE,
 views,component3_dataset,view,preseason_rainfall_mm,DOUBLE,
 views,component3_dataset,view,rain_days,HUGEINT,
 views,component3_dataset,view,heavy_rain_days,HUGEINT,
-views,component3_dataset,view,temp_mean_c,DOUBLE,Mean air temperature (°C)
-views,component3_dataset,view,temp_max_c,DOUBLE,Maximum air temperature (°C)
-views,component3_dataset,view,historical_glut_label,VARCHAR,"Glut if glut_weeks ≥ 4, else No glut"
+views,component3_dataset,view,temp_mean_c,DOUBLE,Mean air temperature (C)
+views,component3_dataset,view,temp_max_c,DOUBLE,Maximum air temperature (C)
+views,component3_dataset,view,historical_glut_label,VARCHAR,"Glut if glut_weeks >= 4, else No glut"
 views,component3_dataset,view,cobweb_index,DOUBLE,ln(previous-season harvest real price / mean of the 3 seasons before it)
-views,component3_dataset,view,supply_pressure_score,DOUBLE,0–100 entropy-weighted pre-planting supply pressure score
+views,component3_dataset,view,supply_pressure_score,DOUBLE,0-100 entropy-weighted pre-planting supply pressure score
 views,component3_dataset,view,glut_risk_label,VARCHAR,Realised glut risk class: Low / Medium / High
 views,component3_dataset,view,split,VARCHAR,"train / validation / test (season-based, shared by all modules)"
-views,component4_dataset,view,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct–Mar) or 2025 Yala (Apr–Sep)"
+views,component4_dataset,view,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct-Mar) or 2025 Yala (Apr-Sep)"
 views,component4_dataset,view,season_type,VARCHAR,Maha or Yala
-views,component4_dataset,view,season_year,BIGINT,Starting calendar year of the season
-views,component4_dataset,view,district,VARCHAR,One of 25 administrative districts (canonical spelling)
-views,component4_dataset,view,economic_centre,VARCHAR,Dedicated economic centre (wholesale market)
+views,component4_dataset,view,season_year,INTEGER,Starting calendar year of the season
+views,component4_dataset,view,district,VARCHAR,Administrative district (canonical spelling)
+views,component4_dataset,view,economic_centre,VARCHAR,Dedicated economic centre
 views,component4_dataset,view,crop,VARCHAR,"Tomato, Pumpkin, Cucumber, Winged bean, Green chilli"
-views,component4_dataset,view,climatic_zone,VARCHAR,Wet / Intermediate / Dry / Up-country
-views,component4_dataset,view,elevation_m,BIGINT,Elevation (m)
+views,component4_dataset,view,climatic_zone,VARCHAR,
+views,component4_dataset,view,elevation_m,INTEGER,
 views,component4_dataset,view,cultivated_extent_ha,DOUBLE,
 views,component4_dataset,view,available_land_ha,DOUBLE,
 views,component4_dataset,view,target_extent_ha,DOUBLE,
-views,component4_dataset,view,production_t,DOUBLE,Production (tonnes)
-views,component4_dataset,view,yield_t_ha,DOUBLE,Yield (tonnes per hectare)
+views,component4_dataset,view,production_t,DOUBLE,Production (t)
+views,component4_dataset,view,yield_t_ha,DOUBLE,Yield (t/ha)
 views,component4_dataset,view,farmgate_price_rs_kg,DOUBLE,
 views,component4_dataset,view,unit_cost_rs_kg,DOUBLE,Cost of production per kg incl. imputed cost (Rs/kg)
 views,component4_dataset,view,cost_of_cultivation_rs_ha,DOUBLE,
@@ -284,13 +310,13 @@ views,component4_dataset,view,national_production_t,DOUBLE,
 views,component4_dataset,view,market_arrivals_t,DOUBLE,
 views,component4_dataset,view,harvest_wholesale_price_rs_kg,DOUBLE,
 views,component4_dataset,view,season_rainfall_mm,DOUBLE,
-views,component4_dataset,view,temp_mean_c,DOUBLE,Mean air temperature (°C)
-views,component4_dataset,view,historical_glut_label,VARCHAR,"Glut if glut_weeks ≥ 4, else No glut"
+views,component4_dataset,view,temp_mean_c,DOUBLE,Mean air temperature (C)
+views,component4_dataset,view,historical_glut_label,VARCHAR,"Glut if glut_weeks >= 4, else No glut"
 views,component4_dataset,view,cobweb_index,DOUBLE,ln(previous-season harvest real price / mean of the 3 seasons before it)
-views,component4_dataset,view,supply_pressure_score,DOUBLE,0–100 entropy-weighted pre-planting supply pressure score
+views,component4_dataset,view,supply_pressure_score,DOUBLE,0-100 entropy-weighted pre-planting supply pressure score
 views,component4_dataset,view,glut_risk_label,VARCHAR,Realised glut risk class: Low / Medium / High
-views,harvest_market_season,view,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct–Mar) or 2025 Yala (Apr–Sep)"
-views,harvest_market_season,view,economic_centre,VARCHAR,Dedicated economic centre (wholesale market)
+views,harvest_market_season,view,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct-Mar) or 2025 Yala (Apr-Sep)"
+views,harvest_market_season,view,economic_centre,VARCHAR,Dedicated economic centre
 views,harvest_market_season,view,crop,VARCHAR,"Tomato, Pumpkin, Cucumber, Winged bean, Green chilli"
 views,harvest_market_season,view,harvest_wholesale_mean_rs_kg,DOUBLE,
 views,harvest_market_season,view,harvest_wholesale_min_rs_kg,DOUBLE,
@@ -298,21 +324,21 @@ views,harvest_market_season,view,harvest_wholesale_max_rs_kg,DOUBLE,
 views,harvest_market_season,view,harvest_retail_mean_rs_kg,DOUBLE,
 views,harvest_market_season,view,market_arrivals_t,DOUBLE,
 views,harvest_market_season,view,market_wastage_t,DOUBLE,
-views,main_centre,view,district,VARCHAR,One of 25 administrative districts (canonical spelling)
-views,main_centre,view,economic_centre,VARCHAR,Dedicated economic centre (wholesale market)
-views,preseason_rain_district,view,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct–Mar) or 2025 Yala (Apr–Sep)"
-views,preseason_rain_district,view,district,VARCHAR,One of 25 administrative districts (canonical spelling)
+views,main_centre,view,district,VARCHAR,Administrative district (canonical spelling)
+views,main_centre,view,economic_centre,VARCHAR,Dedicated economic centre
+views,preseason_rain_district,view,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct-Mar) or 2025 Yala (Apr-Sep)"
+views,preseason_rain_district,view,district,VARCHAR,Administrative district (canonical spelling)
 views,preseason_rain_district,view,preseason_rainfall_mm,DOUBLE,
-views,season_base,view,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct–Mar) or 2025 Yala (Apr–Sep)"
+views,season_base,view,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct-Mar) or 2025 Yala (Apr-Sep)"
 views,season_base,view,season_type,VARCHAR,Maha or Yala
-views,season_base,view,season_year,BIGINT,Starting calendar year of the season
-views,season_base,view,district,VARCHAR,One of 25 administrative districts (canonical spelling)
-views,season_base,view,economic_centre,VARCHAR,Dedicated economic centre (wholesale market)
+views,season_base,view,season_year,INTEGER,Starting calendar year of the season
+views,season_base,view,district,VARCHAR,Administrative district (canonical spelling)
+views,season_base,view,economic_centre,VARCHAR,Dedicated economic centre
 views,season_base,view,crop,VARCHAR,"Tomato, Pumpkin, Cucumber, Winged bean, Green chilli"
 views,season_base,view,cultivated_extent_ha,DOUBLE,
 views,season_base,view,target_extent_ha,DOUBLE,
-views,season_base,view,production_t,DOUBLE,Production (tonnes)
-views,season_base,view,yield_t_ha,DOUBLE,Yield (tonnes per hectare)
+views,season_base,view,production_t,DOUBLE,Production (t)
+views,season_base,view,yield_t_ha,DOUBLE,Yield (t/ha)
 views,season_base,view,farmgate_price_rs_kg,DOUBLE,
 views,season_base,view,unit_cost_rs_kg,DOUBLE,Cost of production per kg incl. imputed cost (Rs/kg)
 views,season_base,view,harvest_wholesale_mean_rs_kg,DOUBLE,
@@ -325,27 +351,27 @@ views,season_base,view,season_rainfall_mm,DOUBLE,
 views,season_base,view,preseason_rainfall_mm,DOUBLE,
 views,season_base,view,rain_days,HUGEINT,
 views,season_base,view,heavy_rain_days,HUGEINT,
-views,season_base,view,temp_mean_c,DOUBLE,Mean air temperature (°C)
-views,season_base,view,temp_max_c,DOUBLE,Maximum air temperature (°C)
+views,season_base,view,temp_mean_c,DOUBLE,Mean air temperature (C)
+views,season_base,view,temp_max_c,DOUBLE,Maximum air temperature (C)
 views,season_base,view,et0_mm,DOUBLE,FAO reference evapotranspiration (mm)
-views,season_base,view,historical_glut_label,VARCHAR,"Glut if glut_weeks ≥ 4, else No glut"
+views,season_base,view,historical_glut_label,VARCHAR,"Glut if glut_weeks >= 4, else No glut"
 views,season_base,view,cobweb_index,DOUBLE,ln(previous-season harvest real price / mean of the 3 seasons before it)
-views,season_base,view,supply_pressure_score,DOUBLE,0–100 entropy-weighted pre-planting supply pressure score
+views,season_base,view,supply_pressure_score,DOUBLE,0-100 entropy-weighted pre-planting supply pressure score
 views,season_base,view,glut_risk_label,VARCHAR,Realised glut risk class: Low / Medium / High
-views,season_base,view,climatic_zone,VARCHAR,Wet / Intermediate / Dry / Up-country
-views,season_base,view,elevation_m,BIGINT,Elevation (m)
+views,season_base,view,climatic_zone,VARCHAR,
+views,season_base,view,elevation_m,INTEGER,
 views,season_base,view,national_production_t,DOUBLE,
 views,season_base,view,split,VARCHAR,"train / validation / test (season-based, shared by all modules)"
-views,weather_season_district,view,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct–Mar) or 2025 Yala (Apr–Sep)"
-views,weather_season_district,view,district,VARCHAR,One of 25 administrative districts (canonical spelling)
+views,weather_season_district,view,season,VARCHAR,"Season label, e.g. 2024/25 Maha (Oct-Mar) or 2025 Yala (Apr-Sep)"
+views,weather_season_district,view,district,VARCHAR,Administrative district (canonical spelling)
 views,weather_season_district,view,season_rainfall_mm,DOUBLE,
 views,weather_season_district,view,rain_days,HUGEINT,
 views,weather_season_district,view,heavy_rain_days,HUGEINT,
-views,weather_season_district,view,temp_mean_c,DOUBLE,Mean air temperature (°C)
-views,weather_season_district,view,temp_max_c,DOUBLE,Maximum air temperature (°C)
+views,weather_season_district,view,temp_mean_c,DOUBLE,Mean air temperature (C)
+views,weather_season_district,view,temp_max_c,DOUBLE,Maximum air temperature (C)
 views,weather_season_district,view,et0_mm,DOUBLE,FAO reference evapotranspiration (mm)
-views,weather_weekly_district,view,district,VARCHAR,One of 25 administrative districts (canonical spelling)
+views,weather_weekly_district,view,district,VARCHAR,Administrative district (canonical spelling)
 views,weather_weekly_district,view,year,BIGINT,Calendar year
-views,weather_weekly_district,view,week,INTEGER,Week number 1–52
+views,weather_weekly_district,view,week,INTEGER,Week number 1-52
 views,weather_weekly_district,view,rainfall_mm,DOUBLE,Rainfall (mm)
-views,weather_weekly_district,view,temp_mean_c,DOUBLE,Mean air temperature (°C)
+views,weather_weekly_district,view,temp_mean_c,DOUBLE,Mean air temperature (C)

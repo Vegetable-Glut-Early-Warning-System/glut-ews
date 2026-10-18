@@ -1,36 +1,38 @@
 {
-  "built_at": "2026-10-18T09:08:59",
-  "database_sha256": "a465a7b7442b32558a26f83fb5669e9494d08dc89bb34c3c6818155ef29ef77b",
+  "built_at": "2026-10-18T23:47:38",
+  "database_sha256": "8bacf79d421279a80521d07118e00b17f00de3e62d515cb60c5f6745c6c00959",
   "active_output_versions": {
     "c1_glut_season": [
-      "placeholder_v0"
+      "v0"
     ],
     "c2_pressure_score": [
-      "placeholder_v0"
+      "v0"
     ],
     "c3_training_label": [
-      "placeholder_v0"
+      "v0"
     ],
     "c3_risk_prediction": [
-      "placeholder_v0"
-    ]
+      "v0"
+    ],
+    "c4_advisory": []
   },
-  "applied_output_files": [],
-  "applied_core_updates": [],
+  "seed": 20261018,
+  "proposed_included": true,
+  "build": "from scratch",
   "tables": [
     {
       "schema": "core",
       "table": "bridge_district_centre",
       "type": "table",
       "rows": 83,
-      "columns": 4
+      "columns": 3
     },
     {
       "schema": "core",
       "table": "cost_season",
       "type": "table",
       "rows": 70,
-      "columns": 6
+      "columns": 4
     },
     {
       "schema": "core",
@@ -45,6 +47,13 @@
       "type": "table",
       "rows": 5,
       "columns": 3
+    },
+    {
+      "schema": "core",
+      "table": "dim_crop_district",
+      "type": "table",
+      "rows": 29,
+      "columns": 5
     },
     {
       "schema": "core",
@@ -72,13 +81,13 @@
       "table": "harvest_weekly_national",
       "type": "table",
       "rows": 1820,
-      "columns": 5
+      "columns": 4
     },
     {
       "schema": "core",
       "table": "known_issues",
       "type": "table",
-      "rows": 15,
+      "rows": 19,
       "columns": 4
     },
     {
@@ -86,84 +95,91 @@
       "table": "macro_monthly",
       "type": "table",
       "rows": 84,
-      "columns": 3
+      "columns": 2
     },
     {
       "schema": "core",
       "table": "market_arrivals_weekly",
       "type": "table",
-      "rows": 21840,
-      "columns": 6
+      "rows": 14104,
+      "columns": 5
     },
     {
       "schema": "core",
       "table": "market_prices_weekly",
       "type": "table",
-      "rows": 21840,
-      "columns": 6
+      "rows": 19656,
+      "columns": 5
     },
     {
       "schema": "core",
       "table": "model_parameters",
       "type": "table",
-      "rows": 14,
-      "columns": 7
+      "rows": 22,
+      "columns": 6
     },
     {
       "schema": "core",
       "table": "national_supply_season",
       "type": "table",
       "rows": 70,
-      "columns": 7
+      "columns": 5
     },
     {
       "schema": "core",
       "table": "planting_target_season",
       "type": "table",
-      "rows": 1750,
-      "columns": 5
+      "rows": 402,
+      "columns": 4
     },
     {
       "schema": "core",
       "table": "supply_season",
       "type": "table",
-      "rows": 1750,
-      "columns": 7
+      "rows": 402,
+      "columns": 6
     },
     {
       "schema": "core",
       "table": "weather_daily",
       "type": "table",
       "rows": 68525,
-      "columns": 7
+      "columns": 6
     },
     {
       "schema": "outputs",
       "table": "c1_glut_season",
       "type": "table",
-      "rows": 840,
+      "rows": 756,
       "columns": 8
     },
     {
       "schema": "outputs",
       "table": "c2_pressure_score",
       "type": "table",
-      "rows": 1750,
-      "columns": 6
+      "rows": 402,
+      "columns": 7
     },
     {
       "schema": "outputs",
       "table": "c3_risk_prediction",
       "type": "table",
-      "rows": 1750,
-      "columns": 8
+      "rows": 402,
+      "columns": 9
     },
     {
       "schema": "outputs",
       "table": "c3_training_label",
       "type": "table",
-      "rows": 1750,
+      "rows": 402,
       "columns": 5
+    },
+    {
+      "schema": "outputs",
+      "table": "c4_advisory",
+      "type": "table",
+      "rows": 0,
+      "columns": 10
     },
     {
       "schema": "raw",
@@ -209,6 +225,13 @@
     },
     {
       "schema": "raw",
+      "table": "dcs_weekly_retail_prices",
+      "type": "table",
+      "rows": 22449,
+      "columns": 6
+    },
+    {
+      "schema": "raw",
       "table": "harti_rr247_dambulla_share",
       "type": "table",
       "rows": 8,
@@ -236,31 +259,38 @@
       "columns": 8
     },
     {
+      "schema": "raw",
+      "table": "wfp_market_prices",
+      "type": "table",
+      "rows": 11672,
+      "columns": 16
+    },
+    {
       "schema": "views",
       "table": "component1_dataset",
       "type": "view",
-      "rows": 21840,
+      "rows": 14104,
       "columns": 16
     },
     {
       "schema": "views",
       "table": "component2_dataset",
       "type": "view",
-      "rows": 1750,
+      "rows": 402,
       "columns": 22
     },
     {
       "schema": "views",
       "table": "component3_dataset",
       "type": "view",
-      "rows": 1750,
+      "rows": 402,
       "columns": 29
     },
     {
       "schema": "views",
       "table": "component4_dataset",
       "type": "view",
-      "rows": 1750,
+      "rows": 402,
       "columns": 25
     }
   ]

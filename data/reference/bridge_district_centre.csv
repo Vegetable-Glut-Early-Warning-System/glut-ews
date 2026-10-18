@@ -1,0 +1,84 @@
+district,economic_centre,weight
+Ampara,Dambulla,0.3
+Ampara,Embilipitiya,0.3
+Ampara,Peliyagoda,0.4
+Anuradhapura,Dambulla,0.79
+Anuradhapura,Peliyagoda,0.05
+Anuradhapura,Thambuttegama,0.16
+Badulla,Bandarawela,0.625
+Badulla,Keppetipola,0.1979
+Badulla,Peliyagoda,0.1771
+Batticaloa,Dambulla,0.3
+Batticaloa,Embilipitiya,0.3
+Batticaloa,Peliyagoda,0.4
+Colombo,Meegoda,0.3
+Colombo,Narahenpita,0.2
+Colombo,Peliyagoda,0.5
+Galle,Embilipitiya,0.3
+Galle,Meegoda,0.3
+Galle,Peliyagoda,0.4
+Gampaha,Meegoda,0.2
+Gampaha,Narahenpita,0.1
+Gampaha,Peliyagoda,0.3
+Gampaha,Veyangoda,0.4
+Hambantota,Dambulla,0.0364
+Hambantota,Embilipitiya,0.7273
+Hambantota,Nuwara Eliya,0.0545
+Hambantota,Peliyagoda,0.1818
+Jaffna,Dambulla,0.4
+Jaffna,Peliyagoda,0.3
+Jaffna,Thambuttegama,0.3
+Kalutara,Meegoda,0.5
+Kalutara,Narahenpita,0.2
+Kalutara,Peliyagoda,0.3
+Kandy,Dambulla,0.5393
+Kandy,Kandy,0.427
+Kandy,Peliyagoda,0.0337
+Kegalle,Kandy,0.2
+Kegalle,Peliyagoda,0.5
+Kegalle,Veyangoda,0.3
+Kilinochchi,Dambulla,0.4
+Kilinochchi,Peliyagoda,0.3
+Kilinochchi,Thambuttegama,0.3
+Kurunegala,Dambulla,0.7231
+Kurunegala,Peliyagoda,0.2154
+Kurunegala,Veyangoda,0.0615
+Mannar,Dambulla,0.4
+Mannar,Peliyagoda,0.3
+Mannar,Thambuttegama,0.3
+Matale,Dambulla,0.7
+Matale,Kandy,0.1
+Matale,Peliyagoda,0.2
+Matara,Embilipitiya,0.3
+Matara,Meegoda,0.3
+Matara,Peliyagoda,0.4
+Monaragala,Bandarawela,0.2
+Monaragala,Dambulla,0.2
+Monaragala,Embilipitiya,0.3
+Monaragala,Peliyagoda,0.3
+Mullaitivu,Dambulla,0.4
+Mullaitivu,Peliyagoda,0.3
+Mullaitivu,Thambuttegama,0.3
+Nuwara Eliya,Bandarawela,0.0375
+Nuwara Eliya,Dambulla,0.65
+Nuwara Eliya,Keppetipola,0.05
+Nuwara Eliya,Meegoda,0.0375
+Nuwara Eliya,Nuwara Eliya,0.175
+Nuwara Eliya,Peliyagoda,0.05
+Polonnaruwa,Dambulla,0.6
+Polonnaruwa,Peliyagoda,0.2
+Polonnaruwa,Thambuttegama,0.2
+Puttalam,Dambulla,0.1972
+Puttalam,Norochcholai,0.5634
+Puttalam,Peliyagoda,0.1831
+Puttalam,Thambuttegama,0.0282
+Puttalam,Veyangoda,0.0282
+Ratnapura,Dambulla,0.04
+Ratnapura,Embilipitiya,0.27
+Ratnapura,Peliyagoda,0.69
+Trincomalee,Dambulla,0.5
+Trincomalee,Peliyagoda,0.3
+Trincomalee,Thambuttegama,0.2
+Vavuniya,Dambulla,0.4
+Vavuniya,Peliyagoda,0.3
+Vavuniya,Thambuttegama,0.3

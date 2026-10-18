@@ -12,8 +12,10 @@ __pycache__/
 # data is versioned by DVC, not Git
 /data/glut_ews.duckdb
 /data/glut_ews.duckdb.wal
+/data/glut_ews.building.duckdb*
 /parquet
 /data/raw/sources
+/data/raw/extracts
 /data/outputs/*.parquet
 
 # experiment tracking (local)

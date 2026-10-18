@@ -7,7 +7,6 @@ DISTRICTS = ["Colombo","Gampaha","Kalutara","Kandy","Matale","Nuwara Eliya","Gal
              "Kurunegala","Puttalam","Anuradhapura","Polonnaruwa","Badulla","Monaragala","Ratnapura","Kegalle"]
 CENTRES = ["Dambulla","Meegoda","Narahenpita","Peliyagoda","Thambuttegama","Keppetipola","Nuwara Eliya",
            "Bandarawela","Embilipitiya","Veyangoda","Norochcholai","Kandy"]
-PROVENANCE = {"observed", "estimated", "synthetic", "missing"}
 
 KEYS = {
     "core.market_prices_weekly": ["week_start_date", "economic_centre", "crop"],
@@ -15,6 +14,7 @@ KEYS = {
     "core.supply_season": ["season", "district", "crop"],
     "core.planting_target_season": ["season", "district", "crop"],
     "core.cost_season": ["season", "crop"],
+    "core.dim_crop_district": ["crop", "district"],
     "core.national_supply_season": ["season", "crop"],
     "core.weather_daily": ["date", "district"],
     "outputs.c1_glut_season": ["season", "economic_centre", "crop"],
@@ -27,7 +27,7 @@ class ValidationError(ValueError):
     pass
 
 def validate(df: pd.DataFrame, table: str) -> pd.DataFrame:
-    """Fail loudly on broken keys, unknown names or unknown provenance values."""
+    """Fail loudly on broken keys or unknown crop / district / centre names."""
     errs = []
     keys = KEYS.get(table, [])
     missing_cols = [k for k in keys if k not in df.columns]
@@ -43,10 +43,6 @@ def validate(df: pd.DataFrame, table: str) -> pd.DataFrame:
             bad = set(df[col].dropna()) - set(allowed)
             if bad:
                 errs.append(f"unknown {col} values: {sorted(bad)[:5]}")
-    if "provenance" in df.columns:
-        bad = set(df["provenance"].dropna()) - PROVENANCE
-        if bad:
-            errs.append(f"unknown provenance values: {bad}")
     if errs:
         raise ValidationError(f"{table}: " + "; ".join(errs))
     return df

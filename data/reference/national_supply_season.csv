@@ -1,0 +1,71 @@
+season,crop,extent_ha,production_t,yield_t_ha
+2018/19 Maha,Cucumber,1383.0,20886.0,15.1
+2019 Yala,Cucumber,1172.0,13978.0,11.93
+2019/20 Maha,Cucumber,1397.0,19642.0,14.06
+2020 Yala,Cucumber,1290.0,19034.0,14.76
+2020/21 Maha,Cucumber,1373.0,20087.0,14.63
+2021 Yala,Cucumber,1210.0,16421.0,13.57
+2021/22 Maha,Cucumber,1508.0,18015.0,11.95
+2022 Yala,Cucumber,1126.0,15959.0,14.17
+2022/23 Maha,Cucumber,1629.0,21013.0,12.9
+2023 Yala,Cucumber,1456.0,26603.0,18.27
+2023/24 Maha,Cucumber,1427.0,17937.0,12.57
+2024 Yala,Cucumber,1761.0,27161.0,15.42
+2024/25 Maha,Cucumber,1483.0,18982.2,12.8
+2025 Yala,Cucumber,1241.9,15387.5,12.39
+2018/19 Maha,Green chilli,6611.0,33838.0,5.12
+2019 Yala,Green chilli,4370.0,26755.0,6.12
+2019/20 Maha,Green chilli,7746.0,40814.0,5.27
+2020 Yala,Green chilli,5834.0,38511.0,6.6
+2020/21 Maha,Green chilli,7113.0,37168.0,5.23
+2021 Yala,Green chilli,5188.0,31397.0,6.05
+2021/22 Maha,Green chilli,6830.7,35718.4,5.23
+2022 Yala,Green chilli,5264.5,27316.3,5.19
+2022/23 Maha,Green chilli,7386.0,42270.0,5.72
+2023 Yala,Green chilli,4752.0,25128.0,5.29
+2023/24 Maha,Green chilli,7282.0,40438.0,5.55
+2024 Yala,Green chilli,5093.0,26200.0,5.14
+2024/25 Maha,Green chilli,6656.4,38285.2,5.75
+2025 Yala,Green chilli,4584.2,23135.6,5.05
+2018/19 Maha,Pumpkin,4299.0,59651.0,13.88
+2019 Yala,Pumpkin,2564.0,37822.0,14.75
+2019/20 Maha,Pumpkin,4609.0,61961.0,13.44
+2020 Yala,Pumpkin,3132.0,51361.0,16.4
+2020/21 Maha,Pumpkin,4183.0,63032.0,15.07
+2021 Yala,Pumpkin,3712.0,47118.0,12.69
+2021/22 Maha,Pumpkin,4044.0,55465.0,13.72
+2022 Yala,Pumpkin,2852.0,44250.0,15.52
+2022/23 Maha,Pumpkin,4793.0,59164.0,12.34
+2023 Yala,Pumpkin,2902.0,41779.0,14.4
+2023/24 Maha,Pumpkin,4502.0,46840.0,10.4
+2024 Yala,Pumpkin,3080.0,42565.0,13.82
+2024/25 Maha,Pumpkin,4222.0,46442.0,11.0
+2025 Yala,Pumpkin,3207.5,42974.9,13.4
+2018/19 Maha,Tomato,3291.0,38771.0,11.78
+2019 Yala,Tomato,2578.0,39145.0,15.18
+2019/20 Maha,Tomato,3510.0,42223.0,12.03
+2020 Yala,Tomato,3059.0,48284.0,15.78
+2020/21 Maha,Tomato,3147.0,37303.0,11.85
+2021 Yala,Tomato,3084.0,52366.0,16.98
+2021/22 Maha,Tomato,3032.0,40656.0,13.41
+2022 Yala,Tomato,2861.0,47425.0,16.58
+2022/23 Maha,Tomato,3194.0,46244.0,14.48
+2023 Yala,Tomato,2363.0,34169.0,14.46
+2023/24 Maha,Tomato,3008.0,39293.0,13.06
+2024 Yala,Tomato,2506.0,34945.0,13.94
+2024/25 Maha,Tomato,2177.9,28479.6,13.08
+2025 Yala,Tomato,2554.2,33011.9,12.92
+2018/19 Maha,Winged bean,690.0,7107.0,10.3
+2019 Yala,Winged bean,620.0,6386.0,10.3
+2019/20 Maha,Winged bean,700.0,7210.0,10.3
+2020 Yala,Winged bean,640.0,6592.0,10.3
+2020/21 Maha,Winged bean,710.0,7313.0,10.3
+2021 Yala,Winged bean,630.0,6489.0,10.3
+2021/22 Maha,Winged bean,739.0,7611.7,10.3
+2022 Yala,Winged bean,600.0,6180.0,10.3
+2022/23 Maha,Winged bean,734.0,7560.2,10.3
+2023 Yala,Winged bean,610.0,6283.0,10.3
+2023/24 Maha,Winged bean,700.0,7210.0,10.3
+2024 Yala,Winged bean,650.0,6695.0,10.3
+2024/25 Maha,Winged bean,649.0,6684.7,10.3
+2025 Yala,Winged bean,587.0,6046.1,10.3

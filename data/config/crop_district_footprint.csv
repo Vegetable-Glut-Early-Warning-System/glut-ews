@@ -1,0 +1,30 @@
+crop,district,status,cf_mean_share,cf_min_share,cf_seasons,agstat_2024_share,justification,source
+Tomato,Badulla,core,0.247,0.203,6,0.160,Team field finding; largest DOA-reported district every season,Team field list; DOA Crop Forecast district tables 2021/22 Maha-2024/25 Maha; AgStat 2025 Fig 15.2
+Tomato,Nuwara Eliya,core,0.109,0.025,6,0.143,Team field finding; major up-country producer,Team field list; DOA Crop Forecast; AgStat 2025 Fig 15.2
+Tomato,Kandy,core,0.070,0.019,6,0.083,Team field finding; consistently reported,Team field list; DOA Crop Forecast; AgStat 2025 Fig 15.2
+Tomato,Matale,core,0.117,0.028,6,0.135,Team field finding; second-largest DOA share,Team field list; DOA Crop Forecast; AgStat 2025 Fig 15.2
+Tomato,Hambantota,proposed,0.063,0.033,6,0.087,Present in all 6 DOA seasons and 8.7% of 2024 national extent (two independent sources),DOA Crop Forecast district tables; AgStat 2025 Fig 15.2 (479 ha of 5514 ha)
+Pumpkin,Anuradhapura,core,0.287,0.191,6,,Team field finding; largest DOA-reported district,Team field list; DOA Crop Forecast district tables
+Pumpkin,Monaragala,core,0.177,0.123,6,,Team field finding; second-largest DOA share,Team field list; DOA Crop Forecast district tables
+Pumpkin,Ampara,core,0.045,0.000,6,,Team field finding; DOA reports zero in one season (kept: not clearly contradicted),Team field list; DOA Crop Forecast district tables
+Pumpkin,Hambantota,core,0.066,0.045,6,,Team field finding; consistently reported,Team field list; DOA Crop Forecast district tables
+Pumpkin,Kurunegala,core,0.053,0.040,6,,Team field finding; consistently reported,Team field list; DOA Crop Forecast district tables
+Pumpkin,Puttalam,proposed,0.067,0.045,6,,Larger DOA share than two core districts in every season (mean 6.7% min 4.5%),DOA Crop Forecast district tables 2021/22 Maha-2024/25 Maha
+Green chilli,Anuradhapura,core,0.190,0.097,5,0.157,Team field finding; largest DOA-reported district,Team field list; DOA Crop Forecast; AgStat 2025 Fig 11
+Green chilli,Puttalam,core,0.082,0.063,4,0.101,Team field finding,Team field list; DOA Crop Forecast; AgStat 2025 Fig 11
+Green chilli,Monaragala,core,0.063,0.023,5,0.079,Team field finding,Team field list; DOA Crop Forecast; AgStat 2025 Fig 11
+Green chilli,Kurunegala,core,0.054,0.047,4,0.069,Team field finding,Team field list; DOA Crop Forecast; AgStat 2025 Fig 11
+Green chilli,Hambantota,core,0.044,0.032,5,0.059,Team field finding; smaller DOA share (kept: not contradicted),Team field list; DOA Crop Forecast; AgStat 2025 Fig 11
+Green chilli,Ampara,core,0.057,0.027,5,0.030,Team field finding,Team field list; DOA Crop Forecast; AgStat 2025 Fig 11
+Green chilli,Jaffna,proposed,0.069,0.043,5,0.047,DOA share above four core districts across 5 seasons (mean 6.9% min 4.3%),DOA Crop Forecast district tables 2021/22 Maha-2024 Yala
+Cucumber,Ampara,core,0.052,0.000,6,,Team field finding; DOA reports zero in one season (kept: not clearly contradicted),Team field list; DOA Crop Forecast district tables
+Cucumber,Hambantota,core,0.133,0.109,6,,Team field finding; largest DOA-reported district,Team field list; DOA Crop Forecast district tables
+Cucumber,Kurunegala,core,0.094,0.074,6,,Team field finding,Team field list; DOA Crop Forecast district tables
+Cucumber,Monaragala,core,0.097,0.054,6,,Team field finding,Team field list; DOA Crop Forecast district tables
+Cucumber,Anuradhapura,core,0.080,0.048,6,,Team field finding,Team field list; DOA Crop Forecast district tables
+Cucumber,Puttalam,proposed,0.131,0.072,6,,Second-largest DOA share in every season (mean 13.1% min 7.2%),DOA Crop Forecast district tables 2021/22 Maha-2024/25 Maha
+Winged bean,Matale,core,0.142,0.027,6,,Team field finding,Team field list; DOA Crop Forecast district tables
+Winged bean,Kurunegala,core,0.093,0.037,6,,Team field finding,Team field list; DOA Crop Forecast district tables
+Winged bean,Hambantota,core,0.164,0.122,6,,Team field finding,Team field list; DOA Crop Forecast district tables
+Winged bean,Anuradhapura,core,0.044,0.013,6,,Team field finding; small DOA share (kept: not contradicted),Team field list; DOA Crop Forecast district tables
+Winged bean,Ratnapura,proposed,0.215,0.162,6,,Largest DOA-reported district in every season (mean 21.5% min 16.2%),DOA Crop Forecast district tables 2021/22 Maha-2024/25 Maha
